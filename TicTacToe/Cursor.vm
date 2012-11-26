@@ -1,0 +1,322 @@
+function Cursor.new 0
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push pointer 0
+return
+function Cursor.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Cursor.update 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Cursor.erase 1
+pop temp 0
+push argument 1
+pop this 0
+push argument 2
+pop this 1
+push pointer 0
+call Cursor.draw 1
+pop temp 0
+push constant 0
+return
+function Cursor.draw 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Cursor.drawCursor 1
+pop temp 0
+push constant 0
+return
+function Cursor.erase 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Cursor.drawCursor 1
+pop temp 0
+push constant 0
+return
+function Cursor.drawCursor 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 0
+eq
+push this 1
+push constant 0
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 10
+push constant 18
+push constant 10
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+push constant 158
+push constant 18
+push constant 158
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+push constant 10
+push constant 86
+push constant 158
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE0
+push this 0
+push constant 0
+eq
+push this 1
+push constant 1
+eq
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 180
+push constant 18
+push constant 180
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+push constant 328
+push constant 18
+push constant 328
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+push constant 180
+push constant 86
+push constant 328
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE1
+push this 0
+push constant 0
+eq
+push this 1
+push constant 2
+eq
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 350
+push constant 18
+push constant 350
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+push constant 498
+push constant 18
+push constant 498
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+push constant 350
+push constant 86
+push constant 498
+push constant 86
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE2
+push this 0
+push constant 1
+eq
+push this 1
+push constant 0
+eq
+and
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 10
+push constant 100
+push constant 10
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+push constant 158
+push constant 100
+push constant 158
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+push constant 10
+push constant 167
+push constant 158
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE3
+push this 0
+push constant 1
+eq
+push this 1
+push constant 1
+eq
+and
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 180
+push constant 100
+push constant 180
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+push constant 328
+push constant 100
+push constant 328
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+push constant 180
+push constant 167
+push constant 328
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE4
+push this 0
+push constant 1
+eq
+push this 1
+push constant 2
+eq
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 350
+push constant 100
+push constant 350
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+push constant 498
+push constant 100
+push constant 498
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+push constant 350
+push constant 167
+push constant 498
+push constant 167
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE5
+push this 0
+push constant 2
+eq
+push this 1
+push constant 0
+eq
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 10
+push constant 181
+push constant 10
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+push constant 158
+push constant 181
+push constant 158
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+push constant 10
+push constant 248
+push constant 158
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE6
+push this 0
+push constant 2
+eq
+push this 1
+push constant 1
+eq
+and
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 180
+push constant 181
+push constant 180
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+push constant 328
+push constant 181
+push constant 328
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+push constant 180
+push constant 248
+push constant 328
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE7
+push this 0
+push constant 2
+eq
+push this 1
+push constant 2
+eq
+and
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 350
+push constant 181
+push constant 350
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+push constant 498
+push constant 181
+push constant 498
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+push constant 350
+push constant 248
+push constant 498
+push constant 248
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE8
+push constant 0
+return

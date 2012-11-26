@@ -1,0 +1,221 @@
+function Vector.new 0
+push constant 3
+call Memory.alloc 1
+pop pointer 0
+push constant 0
+pop this 2
+push constant 8
+pop this 1
+push this 1
+call Array.new 1
+pop this 0
+push pointer 0
+return
+function Vector.add 0
+push argument 0
+pop pointer 0
+push this 2
+push this 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+push this 1
+push constant 1
+call Hardware.shl 2
+call Vector.resize 2
+pop temp 0
+label IF_FALSE0
+push this 2
+push this 0
+add
+push argument 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push this 2
+push constant 1
+add
+pop this 2
+push constant 0
+return
+function Vector.addAtIndex 0
+push argument 0
+pop pointer 0
+push argument 2
+push this 0
+add
+push argument 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+return
+function Vector.at 0
+push argument 0
+pop pointer 0
+push argument 1
+push this 0
+add
+pop pointer 1
+push that 0
+return
+function Vector.back 0
+push argument 0
+pop pointer 0
+push this 2
+push constant 1
+sub
+push this 0
+add
+pop pointer 1
+push that 0
+return
+function Vector.delete 0
+push argument 0
+pop pointer 0
+push argument 1
+push constant 0
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push argument 1
+push this 2
+push constant 1
+sub
+gt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+return
+label IF_FALSE1
+push this 2
+push constant 1
+sub
+pop this 2
+push argument 1
+push this 0
+add
+push this 2
+push this 0
+add
+pop pointer 1
+push that 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+return
+function Vector.find 1
+push argument 0
+pop pointer 0
+push argument 1
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1
+neg
+return
+label IF_FALSE0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push this 2
+lt
+not
+if-goto WHILE_END0
+push argument 1
+push local 0
+push this 0
+add
+pop pointer 1
+push that 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 0
+return
+label IF_FALSE1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 1
+neg
+return
+function Vector.deletePtr 0
+push argument 0
+pop pointer 0
+push argument 1
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push pointer 0
+push pointer 0
+push argument 1
+call Vector.find 2
+call Vector.delete 2
+pop temp 0
+push constant 0
+return
+function Vector.size 0
+push argument 0
+pop pointer 0
+push this 2
+return
+function Vector.capacity 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Vector.resize 1
+push argument 0
+pop pointer 0
+push argument 1
+call Array.new 1
+pop local 0
+push local 0
+push this 0
+push this 2
+call Hardware.memcpy 3
+pop temp 0
+push this 0
+call Array.dispose 1
+pop temp 0
+push local 0
+pop this 0
+push argument 1
+pop this 1
+push constant 0
+return
+function Vector.dispose 0
+push argument 0
+pop pointer 0
+push this 0
+call Array.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

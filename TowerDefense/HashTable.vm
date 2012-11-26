@@ -1,0 +1,133 @@
+function HashTable.new 0
+push constant 1
+call Memory.alloc 1
+pop pointer 0
+call Vector.new 0
+pop this 0
+push this 0
+push constant 64
+call Vector.resize 2
+pop temp 0
+push pointer 0
+return
+function HashTable.insert 3
+push argument 0
+pop pointer 0
+push argument 1
+push argument 2
+call Pair.new 2
+pop local 0
+push pointer 0
+push argument 1
+call HashTable.hash 2
+pop local 1
+push this 0
+push local 1
+call Vector.at 2
+pop local 2
+push local 2
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 2
+push local 0
+call Entry.add 2
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+call Entry.new 0
+pop local 2
+push local 2
+push local 0
+call Entry.add 2
+pop temp 0
+push this 0
+push local 2
+push local 1
+call Vector.addAtIndex 3
+pop temp 0
+label IF_END0
+push constant 0
+return
+function HashTable.retrieve 2
+push argument 0
+pop pointer 0
+push pointer 0
+push argument 1
+call HashTable.hash 2
+pop local 0
+push this 0
+push local 0
+call Vector.at 2
+pop local 1
+push local 1
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+push argument 1
+call Entry.retrieve 2
+return
+label IF_FALSE0
+push constant 1
+neg
+return
+function HashTable.dispose 2
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push this 0
+call Vector.size 1
+lt
+not
+if-goto WHILE_END0
+push this 0
+push local 0
+call Vector.at 2
+pop local 1
+push local 1
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+call Entry.dispose 1
+pop temp 0
+label IF_FALSE0
+goto WHILE_EXP0
+label WHILE_END0
+push this 0
+call Vector.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function HashTable.hash 1
+push argument 0
+pop pointer 0
+push argument 1
+push constant 8857
+call Math.multiply 2
+push constant 4419
+neg
+call Hardware.XOR 2
+pop local 0
+push local 0
+push constant 0
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 0
+not
+pop local 0
+label IF_FALSE0
+push local 0
+push this 0
+call Vector.capacity 1
+call Hardware.mod 2
+return

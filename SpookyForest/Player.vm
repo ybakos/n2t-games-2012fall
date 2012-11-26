@@ -1,0 +1,5198 @@
+function Player.getX 0
+push argument 0
+pop pointer 0
+push this 4
+return
+function Player.getY 0
+push argument 0
+pop pointer 0
+push this 5
+return
+function Player.new 0
+push constant 11
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 4
+push argument 1
+pop this 5
+push constant 0
+pop this 0
+push constant 15
+pop this 6
+push constant 15
+pop this 7
+push constant 15
+pop this 8
+push constant 6
+pop this 9
+push constant 1
+pop this 1
+push constant 100
+pop this 3
+push constant 0
+pop this 2
+push argument 2
+pop this 10
+push pointer 0
+return
+function Player.hasHealth 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 3
+push constant 0
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+pop local 0
+label IF_FALSE0
+push local 0
+return
+function Player.draw 0
+push argument 0
+pop pointer 0
+push this 4
+push this 5
+push constant 10
+sub
+push constant 3
+call Screen.drawCircle 3
+pop temp 0
+push this 4
+push this 5
+push constant 10
+sub
+push this 4
+push this 5
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+add
+push this 5
+push constant 5
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push this 5
+push this 4
+push constant 3
+sub
+push this 5
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push this 5
+push this 4
+push constant 3
+add
+push this 5
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Player.drawSword 1
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Player.drawSword 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+label IF_END0
+push this 2
+push constant 0
+gt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+call Player.drawShield 1
+pop temp 0
+goto IF_END1
+label IF_FALSE1
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Player.drawShield 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+label IF_END1
+push constant 0
+return
+function Player.undraw 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Player.draw 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+return
+function Player.drawSword 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+pop local 0
+label IF_FALSE0
+push this 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+pop local 0
+label IF_FALSE1
+push local 0
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 4
+push constant 3
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+goto IF_END2
+label IF_FALSE2
+push this 4
+push constant 3
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_END2
+push constant 0
+return
+function Player.drawShield 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 3
+eq
+push this 0
+push constant 2
+eq
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 4
+push constant 1
+add
+push this 5
+push constant 7
+sub
+push this 4
+push constant 5
+add
+push this 5
+push constant 4
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push this 4
+push constant 2
+add
+push this 5
+push constant 3
+sub
+push this 4
+push constant 4
+add
+push this 5
+push constant 3
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 7
+sub
+push this 4
+push constant 1
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 3
+sub
+push this 4
+push constant 2
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_END0
+push constant 0
+return
+function Player.handleKeyPress 3
+push argument 0
+pop pointer 0
+push argument 1
+push constant 68
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Player.undraw 1
+pop temp 0
+push this 4
+push constant 511
+push this 6
+sub
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push constant 3
+add
+pop this 4
+push constant 1
+pop this 0
+label IF_FALSE1
+push this 10
+push this 4
+push this 5
+call Game.playerPickupShield 3
+pop temp 0
+push pointer 0
+call Player.draw 1
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push argument 1
+push constant 65
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+call Player.undraw 1
+pop temp 0
+push this 4
+push this 7
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 4
+push constant 3
+sub
+pop this 4
+push constant 3
+pop this 0
+label IF_FALSE3
+push this 10
+push this 4
+push this 5
+call Game.playerPickupShield 3
+pop temp 0
+push pointer 0
+call Player.draw 1
+pop temp 0
+goto IF_END2
+label IF_FALSE2
+push argument 1
+push constant 87
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push pointer 0
+call Player.undraw 1
+pop temp 0
+push this 5
+push this 8
+gt
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push constant 3
+sub
+pop this 5
+push constant 0
+pop this 0
+label IF_FALSE5
+push this 10
+push this 4
+push this 5
+call Game.playerPickupShield 3
+pop temp 0
+push pointer 0
+call Player.draw 1
+pop temp 0
+goto IF_END4
+label IF_FALSE4
+push argument 1
+push constant 83
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push pointer 0
+call Player.undraw 1
+pop temp 0
+push this 5
+push constant 255
+push this 9
+sub
+lt
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 5
+push constant 3
+add
+pop this 5
+push constant 2
+pop this 0
+label IF_FALSE7
+push this 10
+push this 4
+push this 5
+call Game.playerPickupShield 3
+pop temp 0
+push pointer 0
+call Player.draw 1
+pop temp 0
+goto IF_END6
+label IF_FALSE6
+push argument 1
+push constant 32
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 10
+pop local 0
+push this 0
+push constant 0
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 4
+pop local 1
+push this 5
+push this 8
+sub
+push local 0
+sub
+pop local 2
+label IF_FALSE9
+push this 0
+push constant 1
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push this 4
+push this 6
+add
+push local 0
+add
+pop local 1
+push this 5
+pop local 2
+label IF_FALSE10
+push this 0
+push constant 2
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push this 4
+pop local 1
+push this 5
+push this 9
+add
+push local 0
+add
+pop local 2
+label IF_FALSE11
+push this 0
+push constant 3
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push this 4
+push this 7
+sub
+push local 0
+sub
+pop local 1
+push this 5
+pop local 2
+label IF_FALSE12
+push this 10
+push local 1
+push local 2
+push local 0
+push constant 30
+call Game.playerAttack 5
+pop temp 0
+push pointer 0
+call Player.drawSwing 1
+pop temp 0
+label IF_FALSE8
+label IF_END6
+label IF_END4
+label IF_END2
+label IF_END0
+push constant 0
+return
+function Player.getHit 0
+push argument 0
+pop pointer 0
+call Output.println 0
+pop temp 0
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 3
+push argument 1
+sub
+pop this 3
+goto IF_END0
+label IF_FALSE0
+push this 2
+push constant 1
+sub
+pop this 2
+label IF_END0
+push constant 0
+return
+function Player.acquireSword 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 1
+add
+pop this 1
+push constant 0
+return
+function Player.acquireShield 0
+push argument 0
+pop pointer 0
+push this 2
+push constant 1
+add
+pop this 2
+push constant 0
+return
+function Player.drawSwing 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+pop local 0
+label IF_FALSE0
+push this 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+pop local 0
+label IF_FALSE1
+push local 0
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+add
+push this 5
+push constant 5
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+add
+push this 5
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 4
+push constant 3
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE3
+push constant 50
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+add
+push this 5
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+add
+push this 5
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 4
+push constant 3
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE4
+push constant 50
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+add
+push this 5
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+add
+push this 5
+push constant 5
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 4
+push constant 3
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+add
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+add
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE5
+goto IF_END2
+label IF_FALSE2
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 4
+push constant 3
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE6
+push constant 50
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+sub
+push this 5
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 4
+push constant 3
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE7
+push constant 50
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+sub
+push this 5
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 1
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+add
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 4
+push this 5
+push constant 2
+sub
+push this 4
+push constant 3
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 4
+push constant 3
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 3
+sub
+push this 5
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 4
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 5
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 8
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 6
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 9
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 7
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 10
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 8
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 11
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 9
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 10
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 12
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 11
+sub
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 4
+push constant 12
+sub
+push this 5
+push constant 13
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE8
+label IF_END2
+push constant 0
+return

@@ -1,0 +1,1111 @@
+function Jack.new 0
+push constant 14
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push this 0
+pop this 3
+push this 1
+pop this 2
+push argument 2
+pop this 4
+push argument 3
+pop this 5
+push constant 0
+pop this 8
+push constant 0
+pop this 9
+push constant 0
+pop this 10
+push constant 0
+pop this 11
+push constant 7
+pop this 7
+push constant 5
+pop this 6
+push constant 0
+pop this 12
+push constant 0
+pop this 13
+push pointer 0
+return
+function Jack.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Jack.setX 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push constant 0
+return
+function Jack.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Jack.setY 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 1
+push constant 0
+return
+function Jack.getW 0
+push argument 0
+pop pointer 0
+push this 5
+return
+function Jack.setW 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 5
+push constant 0
+return
+function Jack.getH 0
+push argument 0
+pop pointer 0
+push this 4
+return
+function Jack.setH 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 4
+push constant 0
+return
+function Jack.getGrounded 0
+push argument 0
+pop pointer 0
+push this 11
+return
+function Jack.setGrounded 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 11
+push constant 0
+return
+function Jack.getJumping 0
+push argument 0
+pop pointer 0
+push this 10
+return
+function Jack.setJumping 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 10
+push constant 0
+return
+function Jack.getFrames 0
+push argument 0
+pop pointer 0
+push this 9
+return
+function Jack.setFrames 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 9
+push constant 0
+return
+function Jack.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Jack.updateState 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 8
+push this 9
+push constant 0
+gt
+not
+push this 11
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 2
+pop this 10
+label IF_FALSE0
+push constant 0
+return
+function Jack.update 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 10
+push argument 1
+push constant 0
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 13
+pop argument 1
+push constant 24576
+push argument 1
+call Memory.poke 2
+pop temp 0
+push constant 0
+pop this 13
+label IF_FALSE0
+push argument 1
+push constant 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+pop this 8
+label IF_FALSE1
+push argument 1
+push constant 90
+eq
+push argument 1
+push constant 131
+eq
+or
+push argument 1
+push constant 32
+eq
+or
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+pop this 10
+push this 12
+push constant 130
+eq
+push this 12
+push constant 132
+eq
+or
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 12
+pop this 13
+label IF_FALSE3
+label IF_FALSE2
+push argument 1
+push constant 130
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 1
+neg
+pop this 8
+label IF_FALSE4
+push argument 1
+push constant 132
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 1
+pop this 8
+label IF_FALSE5
+push argument 1
+pop this 12
+push this 10
+push this 11
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 10
+pop this 9
+push constant 0
+pop this 11
+label IF_FALSE6
+push this 9
+push constant 0
+gt
+not
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 0
+pop this 10
+label IF_FALSE7
+push this 0
+push this 8
+push this 6
+call Math.multiply 2
+add
+pop this 0
+push this 9
+push constant 0
+gt
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 1
+push this 7
+sub
+pop this 1
+push this 9
+push constant 1
+sub
+pop this 9
+goto IF_END8
+label IF_FALSE8
+push this 1
+push this 7
+add
+pop this 1
+label IF_END8
+push this 0
+push constant 0
+lt
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 0
+pop this 0
+label IF_FALSE9
+push this 0
+push this 5
+add
+push constant 510
+gt
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 510
+push this 5
+sub
+pop this 0
+label IF_FALSE10
+push this 1
+push constant 0
+lt
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push constant 0
+pop this 1
+label IF_FALSE11
+push this 1
+push this 4
+add
+push constant 254
+gt
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push constant 254
+push this 4
+sub
+pop this 1
+push constant 0
+pop this 10
+push constant 0
+not
+pop local 0
+label IF_FALSE12
+push local 0
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push constant 0
+not
+pop this 11
+label IF_FALSE13
+push constant 0
+return
+function Jack.draw 0
+push argument 0
+pop pointer 0
+push this 3
+push this 0
+eq
+push this 2
+push this 1
+eq
+and
+not
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 3
+push this 2
+push this 3
+push this 5
+add
+push this 2
+push this 4
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+pop this 3
+push this 1
+pop this 2
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push constant 10
+add
+push this 0
+push this 5
+add
+push this 1
+push this 4
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 5
+add
+push constant 5
+call Screen.drawCircle 3
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Jack.forceDraw 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 3
+push this 2
+push this 3
+push this 5
+add
+push this 2
+push this 4
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+pop this 3
+push this 1
+pop this 2
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push constant 10
+add
+push this 0
+push this 5
+add
+push this 1
+push this 4
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 5
+add
+push constant 5
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+return
+function Jack.drawSpriteJack 0
+push argument 0
+pop pointer 0
+push argument 1
+push constant 20
+add
+push constant 509
+gt
+push argument 2
+push constant 30
+add
+push constant 253
+gt
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 7
+push argument 1
+add
+push constant 0
+push argument 2
+add
+push constant 12
+push argument 1
+add
+push constant 0
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 1
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 1
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 2
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 2
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 3
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 3
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 4
+push argument 2
+add
+push constant 14
+push argument 1
+add
+push constant 4
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 5
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 5
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 7
+push argument 1
+add
+push constant 6
+push argument 2
+add
+push constant 12
+push argument 1
+add
+push constant 6
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 8
+push argument 1
+add
+push constant 7
+push argument 2
+add
+push constant 11
+push argument 1
+add
+push constant 7
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 8
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 8
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 9
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 9
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 10
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 10
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 11
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 11
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 12
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 12
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 13
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 13
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 14
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 14
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 15
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 15
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 16
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 16
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 17
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 17
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 18
+push argument 2
+add
+push constant 2
+push argument 1
+add
+push constant 18
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 18
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 18
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 18
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 18
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 17
+push argument 1
+add
+push constant 18
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 18
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+push argument 1
+add
+push constant 19
+push argument 2
+add
+push constant 2
+push argument 1
+add
+push constant 19
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 19
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 19
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 19
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 19
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 17
+push argument 1
+add
+push constant 19
+push argument 2
+add
+push constant 19
+push argument 1
+add
+push constant 19
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 20
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 20
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 20
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 20
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 21
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 21
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 21
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 21
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 22
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 22
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 22
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 22
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 23
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 23
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 23
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 23
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 24
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 24
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 24
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 24
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 25
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 25
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 25
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 25
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 6
+push argument 1
+add
+push constant 26
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 26
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 26
+push argument 2
+add
+push constant 13
+push argument 1
+add
+push constant 26
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 2
+push argument 1
+add
+push constant 27
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 27
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 27
+push argument 2
+add
+push constant 16
+push argument 1
+add
+push constant 27
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 2
+push argument 1
+add
+push constant 28
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 28
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 28
+push argument 2
+add
+push constant 16
+push argument 1
+add
+push constant 28
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 2
+push argument 1
+add
+push constant 29
+push argument 2
+add
+push constant 8
+push argument 1
+add
+push constant 29
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 11
+push argument 1
+add
+push constant 29
+push argument 2
+add
+push constant 16
+push argument 1
+add
+push constant 29
+push argument 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return

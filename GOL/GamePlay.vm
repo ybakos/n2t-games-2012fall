@@ -1,0 +1,234 @@
+function GamePlay.EntryMode 0
+push constant 0
+push constant 0
+call Cursor.new 2
+pop static 0
+label WHILE_EXP0
+call Keyboard.keyPressed 0
+push constant 128
+eq
+not
+not
+if-goto WHILE_END0
+push static 0
+push constant 0
+not
+call GOL.drawBoard 2
+pop temp 0
+call GamePlay.checkMovement 0
+pop temp 0
+call GamePlay.checkLife 0
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function GamePlay.checkMovement 1
+push constant 0
+pop local 0
+call Keyboard.keyPressed 0
+push constant 131
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push static 0
+call Cursor.moveUp 1
+pop temp 0
+push constant 0
+not
+pop local 0
+label IF_FALSE0
+call Keyboard.keyPressed 0
+push constant 132
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push static 0
+call Cursor.moveRight 1
+pop temp 0
+push constant 0
+not
+pop local 0
+label IF_FALSE1
+call Keyboard.keyPressed 0
+push constant 130
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push static 0
+call Cursor.moveLeft 1
+pop temp 0
+push constant 0
+not
+pop local 0
+label IF_FALSE2
+call Keyboard.keyPressed 0
+push constant 133
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push static 0
+call Cursor.moveDown 1
+pop temp 0
+push constant 0
+not
+pop local 0
+label IF_FALSE3
+push local 0
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+label WHILE_EXP0
+call Keyboard.keyPressed 0
+push constant 0
+eq
+not
+not
+if-goto WHILE_END0
+goto WHILE_EXP0
+label WHILE_END0
+label IF_FALSE4
+push constant 0
+return
+function GamePlay.checkLife 1
+push static 0
+call Cursor.getX 1
+push static 0
+call Cursor.getY 1
+call GOL.isAlive 2
+pop local 0
+call Keyboard.keyPressed 0
+push constant 32
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 0
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push static 0
+call Cursor.getX 1
+push static 0
+call Cursor.getY 1
+call GOL.kill 2
+pop temp 0
+goto IF_END1
+label IF_FALSE1
+push static 0
+call Cursor.getX 1
+push static 0
+call Cursor.getY 1
+call GOL.birth 2
+pop temp 0
+label IF_END1
+label WHILE_EXP0
+call Keyboard.keyPressed 0
+push constant 0
+eq
+not
+not
+if-goto WHILE_END0
+goto WHILE_EXP0
+label WHILE_END0
+label IF_FALSE0
+push constant 0
+return
+function GamePlay.Life 0
+label WHILE_EXP0
+push constant 0
+not
+not
+if-goto WHILE_END0
+call GamePlay.prepare 0
+pop temp 0
+call GamePlay.execute 0
+pop temp 0
+push static 0
+push constant 0
+call GOL.drawBoard 2
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function GamePlay.prepare 3
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 16
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 1
+label WHILE_EXP1
+push local 1
+push constant 8
+lt
+not
+if-goto WHILE_END1
+push local 0
+push local 1
+call GOL.getCell 2
+pop local 2
+push local 2
+call Cell.prepare 1
+pop temp 0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function GamePlay.execute 3
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 16
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 1
+label WHILE_EXP1
+push local 1
+push constant 8
+lt
+not
+if-goto WHILE_END1
+push local 0
+push local 1
+call GOL.getCell 2
+pop local 2
+push local 2
+call Cell.execute 1
+pop temp 0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return

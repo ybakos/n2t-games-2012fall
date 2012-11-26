@@ -1,0 +1,529 @@
+function JSGame.new 0
+push constant 14
+call Memory.alloc 1
+pop pointer 0
+push constant 20
+pop this 8
+call JSSplash.new 0
+pop this 0
+push this 0
+call JSSplash.startScreen 1
+pop temp 0
+push constant 200
+push constant 0
+push constant 30
+call JSSquare.new 3
+pop this 1
+push constant 200
+push constant 200
+push constant 30
+call JSSquare.new 3
+pop this 2
+push constant 100
+push constant 100
+push constant 30
+call JSSquare.new 3
+pop this 3
+push constant 300
+push constant 100
+push constant 30
+call JSSquare.new 3
+pop this 4
+push argument 0
+pop this 10
+push this 8
+call JSComp.new 1
+pop this 5
+push this 8
+call Array.new 1
+pop this 12
+push constant 0
+pop this 6
+push constant 1
+pop this 7
+push constant 1
+pop this 9
+push constant 0
+pop this 11
+push pointer 0
+return
+function JSGame.dispose 0
+push argument 0
+pop pointer 0
+push this 1
+call JSSquare.dispose 1
+pop temp 0
+push this 2
+call JSSquare.dispose 1
+pop temp 0
+push this 3
+call JSSquare.dispose 1
+pop temp 0
+push this 4
+call JSSquare.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function JSGame.run 2
+push argument 0
+pop pointer 0
+push constant 0
+pop local 1
+label WHILE_EXP0
+push this 11
+not
+not
+if-goto WHILE_END0
+push constant 0
+push constant 40
+call Output.moveCursor 2
+pop temp 0
+push constant 6
+call String.new 1
+push constant 82
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push this 9
+call Output.printInt 1
+pop temp 0
+push constant 1
+call String.new 1
+push constant 47
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push this 10
+call Output.printInt 1
+pop temp 0
+push constant 0
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push constant 2000
+call Sys.wait 1
+pop temp 0
+push pointer 0
+call JSGame.compTurn 1
+pop temp 0
+push pointer 0
+call JSGame.userTurn 1
+pop temp 0
+push pointer 0
+call JSGame.testInput 1
+pop local 1
+push local 1
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push this 8
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+call JSSplash.roundWon 1
+pop temp 0
+push this 9
+push constant 1
+add
+pop this 9
+push constant 1
+pop this 7
+push pointer 0
+call JSGame.redraw 1
+pop temp 0
+label IF_FALSE1
+push this 7
+push this 8
+eq
+not
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 7
+push constant 1
+add
+pop this 7
+label IF_FALSE2
+label IF_FALSE0
+push local 1
+not
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 0
+push this 7
+call JSSplash.roundOver 2
+pop temp 0
+push this 9
+push constant 1
+add
+pop this 9
+push constant 1
+pop this 7
+push pointer 0
+call JSGame.redraw 1
+pop temp 0
+label IF_FALSE3
+push this 9
+push this 10
+push constant 1
+add
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 0
+call JSSplash.gameOver 1
+pop temp 0
+push constant 0
+not
+pop this 11
+label IF_FALSE4
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function JSGame.makeSelection 0
+push argument 0
+pop pointer 0
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+call JSSquare.drawFilled 1
+pop temp 0
+label IF_FALSE0
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 2
+call JSSquare.drawFilled 1
+pop temp 0
+label IF_FALSE1
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 3
+call JSSquare.drawFilled 1
+pop temp 0
+label IF_FALSE2
+push this 6
+push constant 4
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 4
+call JSSquare.drawFilled 1
+pop temp 0
+label IF_FALSE3
+push constant 0
+return
+function JSGame.emptySquares 0
+push argument 0
+pop pointer 0
+push this 6
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+call JSSquare.erase 1
+pop temp 0
+push this 1
+call JSSquare.drawOutline 1
+pop temp 0
+label IF_FALSE0
+push this 6
+push constant 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 2
+call JSSquare.erase 1
+pop temp 0
+push this 2
+call JSSquare.drawOutline 1
+pop temp 0
+label IF_FALSE1
+push this 6
+push constant 3
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 3
+call JSSquare.erase 1
+pop temp 0
+push this 3
+call JSSquare.drawOutline 1
+pop temp 0
+label IF_FALSE2
+push this 6
+push constant 4
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 4
+call JSSquare.erase 1
+pop temp 0
+push this 4
+call JSSquare.drawOutline 1
+pop temp 0
+label IF_FALSE3
+push constant 0
+return
+function JSGame.redraw 0
+push argument 0
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push this 1
+call JSSquare.erase 1
+pop temp 0
+push this 1
+call JSSquare.drawOutline 1
+pop temp 0
+push this 2
+call JSSquare.erase 1
+pop temp 0
+push this 2
+call JSSquare.drawOutline 1
+pop temp 0
+push this 3
+call JSSquare.erase 1
+pop temp 0
+push this 3
+call JSSquare.drawOutline 1
+pop temp 0
+push this 4
+call JSSquare.erase 1
+pop temp 0
+push this 4
+call JSSquare.drawOutline 1
+pop temp 0
+push constant 0
+return
+function JSGame.userTurn 4
+push argument 0
+pop pointer 0
+push constant 0
+pop local 3
+push constant 0
+pop local 1
+label WHILE_EXP0
+push local 1
+not
+not
+if-goto WHILE_END0
+label WHILE_EXP1
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END1
+push constant 0
+pop this 6
+call Keyboard.keyPressed 0
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 81
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+pop local 1
+push constant 0
+not
+pop this 11
+label IF_FALSE0
+push local 0
+push constant 131
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 1
+pop this 6
+label IF_FALSE1
+push local 0
+push constant 133
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 2
+pop this 6
+label IF_FALSE2
+push local 0
+push constant 130
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 3
+pop this 6
+label IF_FALSE3
+push local 0
+push constant 132
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 4
+pop this 6
+label IF_FALSE4
+push local 3
+push this 12
+add
+push this 6
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 3
+push constant 1
+add
+pop local 3
+label WHILE_EXP2
+push local 0
+push constant 0
+eq
+not
+not
+if-goto WHILE_END2
+call Keyboard.keyPressed 0
+pop local 0
+push pointer 0
+call JSGame.makeSelection 1
+pop temp 0
+goto WHILE_EXP2
+label WHILE_END2
+push constant 1000
+call Sys.wait 1
+pop temp 0
+push pointer 0
+call JSGame.emptySquares 1
+pop temp 0
+push local 3
+push this 7
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+return
+label IF_FALSE5
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function JSGame.compTurn 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 5
+call JSComp.getSequence 1
+pop this 13
+label WHILE_EXP0
+push local 0
+push this 7
+lt
+not
+if-goto WHILE_END0
+push local 0
+push this 13
+add
+pop pointer 1
+push that 0
+pop this 6
+push pointer 0
+call JSGame.makeSelection 1
+pop temp 0
+push constant 1000
+call Sys.wait 1
+pop temp 0
+push pointer 0
+call JSGame.emptySquares 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function JSGame.testInput 2
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push constant 0
+not
+pop local 1
+label WHILE_EXP0
+push local 0
+push this 7
+lt
+not
+if-goto WHILE_END0
+push local 0
+push this 12
+add
+pop pointer 1
+push that 0
+push local 0
+push this 13
+add
+pop pointer 1
+push that 0
+eq
+not
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop local 1
+label IF_FALSE0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push local 1
+return

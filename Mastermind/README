@@ -1,0 +1,10 @@
+The first screen displayed is the intro screen. Press any key on the keyboard to move to the next screen.
+
+The second screen is instructions on how the program operates. Again, press any key to move on to the next screen.
+NOTE: The 'seed' value for the random generator is the value from the entered key, so it is more fun to alternate they keys you use to move the screen on. 
+
+The last screen depicts first: the guess number that you are on (you are allowed 12 guesses.) Following that are your color guess for the 4 available positions. Following those guesses are the games calculation of how accurate the guess was. A '+' indicates a pin of the correct color in the correct position. A '-' indicates a pin of the correct color in an incorrect position. 
+
+If the correct code is guessed, a 'You win' line will be displayed.
+
+After 12 guesses have passed, a note will appear indicating that the 'game' won, and will also display the correct code.

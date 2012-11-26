@@ -1,0 +1,23 @@
+function Main.main 0
+call Screens.printWelcome 0
+pop temp 0
+call Screens.waitUntilKeyPressed 0
+pop temp 0
+call Screens.printGameInstructions 0
+pop temp 0
+call Screens.waitUntilKeyPressed 0
+pop temp 0
+call BackEnd.generateCode 0
+pop temp 0
+call Screens.startGame 0
+pop temp 0
+label WHILE_EXP0
+call BackEnd.getNextGuess 0
+not
+if-goto WHILE_END0
+call BackEnd.compareGuess 0
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return

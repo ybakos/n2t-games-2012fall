@@ -1,0 +1,1004 @@
+function Monster.new 0
+push constant 11
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 10
+push argument 1
+pop this 8
+push argument 2
+pop this 9
+push argument 3
+pop this 7
+push argument 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 30
+pop this 1
+push constant 0
+pop this 0
+push constant 5
+pop this 2
+push constant 5
+pop this 3
+push constant 9
+pop this 4
+push constant 9
+pop this 5
+push constant 10
+pop this 6
+label IF_FALSE0
+push pointer 0
+return
+function Monster.move 3
+push argument 0
+pop pointer 0
+push constant 5
+call Random.randRange 1
+pop local 0
+push local 0
+push constant 0
+eq
+push local 0
+push constant 1
+eq
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Monster.undraw 1
+pop temp 0
+push constant 3
+call Random.randRange 1
+pop local 1
+push constant 12
+call Random.randRange 1
+pop local 2
+push local 1
+pop this 0
+push local 1
+push constant 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 9
+push local 2
+sub
+pop this 9
+goto IF_END1
+label IF_FALSE1
+push local 1
+push constant 1
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 8
+push local 2
+add
+pop this 8
+goto IF_END2
+label IF_FALSE2
+push local 1
+push constant 2
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 9
+push local 2
+add
+pop this 9
+goto IF_END3
+label IF_FALSE3
+push local 1
+push constant 3
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 8
+push local 2
+sub
+pop this 8
+label IF_FALSE4
+label IF_END3
+label IF_END2
+label IF_END1
+push pointer 0
+call Monster.draw 1
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push local 0
+push constant 2
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push pointer 0
+call Monster.attack 1
+pop temp 0
+label IF_FALSE5
+label IF_END0
+push constant 0
+return
+function Monster.attack 3
+push argument 0
+pop pointer 0
+push constant 3
+push this 7
+add
+pop local 0
+push this 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 8
+pop local 1
+push this 9
+push local 0
+sub
+push this 2
+sub
+pop local 2
+label IF_FALSE0
+push this 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 8
+push local 0
+add
+push this 5
+add
+pop local 1
+push this 9
+pop local 2
+label IF_FALSE1
+push this 0
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 8
+pop local 1
+push this 9
+push local 0
+add
+push this 3
+add
+pop local 2
+label IF_FALSE2
+push this 0
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push local 0
+sub
+push this 4
+sub
+pop local 1
+push this 9
+pop local 2
+label IF_FALSE3
+push this 10
+push local 1
+push local 2
+push local 0
+push this 6
+call Game.monsterAttack 5
+pop temp 0
+push pointer 0
+call Monster.animateAttack 1
+pop temp 0
+push constant 0
+return
+function Monster.animateAttack 2
+push argument 0
+pop pointer 0
+push constant 0
+pop local 1
+push constant 35
+pop local 0
+push this 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+pop local 1
+label IF_FALSE0
+push this 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+pop local 1
+label IF_FALSE1
+push local 1
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 3
+add
+push this 9
+push constant 4
+sub
+push this 8
+push constant 4
+add
+push this 9
+push constant 4
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 2
+add
+push this 9
+push constant 3
+sub
+push this 8
+push constant 7
+add
+push this 9
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 6
+add
+push this 9
+push constant 2
+sub
+push this 8
+push constant 8
+add
+push this 9
+push constant 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 7
+add
+push this 9
+push constant 1
+sub
+push this 8
+push constant 9
+add
+push this 9
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 7
+add
+push this 9
+push constant 1
+sub
+push this 8
+push constant 9
+add
+push this 9
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 6
+add
+push this 9
+push constant 2
+sub
+push this 8
+push constant 8
+add
+push this 9
+push constant 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 4
+add
+push this 9
+push constant 3
+sub
+push this 8
+push constant 7
+add
+push this 9
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 5
+add
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 3
+add
+push this 9
+push constant 4
+sub
+push this 8
+push constant 4
+add
+push this 9
+push constant 4
+sub
+call Screen.drawLine 4
+pop temp 0
+goto IF_END2
+label IF_FALSE2
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 3
+sub
+push this 9
+push constant 4
+sub
+push this 8
+push constant 4
+sub
+push this 9
+push constant 4
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 2
+sub
+push this 9
+push constant 3
+sub
+push this 8
+push constant 7
+sub
+push this 9
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 6
+sub
+push this 9
+push constant 2
+sub
+push this 8
+push constant 8
+sub
+push this 9
+push constant 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 7
+sub
+push this 9
+push constant 1
+sub
+push this 8
+push constant 9
+sub
+push this 9
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 7
+sub
+push this 9
+push constant 1
+sub
+push this 8
+push constant 9
+sub
+push this 9
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 6
+sub
+push this 9
+push constant 2
+sub
+push this 8
+push constant 8
+sub
+push this 9
+push constant 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+call Sys.wait 1
+pop temp 0
+push this 8
+push constant 4
+sub
+push this 9
+push constant 3
+sub
+push this 8
+push constant 7
+sub
+push this 9
+push constant 3
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 8
+push constant 5
+sub
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 3
+sub
+push this 9
+push constant 4
+sub
+push this 8
+push constant 4
+sub
+push this 9
+push constant 4
+sub
+call Screen.drawLine 4
+pop temp 0
+label IF_END2
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+return
+function Monster.draw 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+pop local 0
+label IF_FALSE0
+push this 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+pop local 0
+label IF_FALSE1
+push pointer 0
+call Monster.checkBounds 1
+pop temp 0
+push local 0
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 8
+push constant 3
+add
+push this 9
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 4
+add
+push this 9
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 5
+add
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 3
+add
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+add
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+add
+push this 9
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 1
+add
+push this 9
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+sub
+push this 9
+push constant 1
+sub
+push this 8
+push constant 3
+add
+push this 9
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 3
+sub
+push this 9
+push this 8
+push constant 4
+add
+push this 9
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 5
+sub
+push this 9
+push constant 1
+add
+push this 8
+push constant 5
+add
+push this 9
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 2
+sub
+push this 9
+push constant 2
+add
+push this 8
+push constant 2
+add
+push this 9
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 4
+add
+push this 9
+push constant 2
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 1
+sub
+push this 9
+push constant 3
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push this 9
+push constant 4
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+add
+push this 9
+push constant 3
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 3
+add
+push this 9
+push constant 4
+add
+call Screen.drawPixel 2
+pop temp 0
+goto IF_END2
+label IF_FALSE2
+push this 8
+push constant 3
+sub
+push this 9
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 4
+sub
+push this 9
+push constant 4
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 5
+sub
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 3
+sub
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+sub
+push this 9
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+sub
+push this 9
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 1
+sub
+push this 9
+push constant 2
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+add
+push this 9
+push constant 1
+sub
+push this 8
+push constant 3
+sub
+push this 9
+push constant 1
+sub
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 3
+add
+push this 9
+push this 8
+push constant 4
+sub
+push this 9
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 5
+add
+push this 9
+push constant 1
+add
+push this 8
+push constant 5
+sub
+push this 9
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 2
+add
+push this 9
+push constant 2
+add
+push this 8
+push constant 2
+sub
+push this 9
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push this 8
+push constant 4
+sub
+push this 9
+push constant 2
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 1
+add
+push this 9
+push constant 3
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push this 9
+push constant 4
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 2
+sub
+push this 9
+push constant 3
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 8
+push constant 3
+sub
+push this 9
+push constant 4
+add
+call Screen.drawPixel 2
+pop temp 0
+label IF_END2
+push constant 0
+return
+function Monster.undraw 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Monster.draw 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+return
+function Monster.checkBounds 4
+push argument 0
+pop pointer 0
+push this 2
+pop local 0
+push constant 256
+push this 3
+sub
+pop local 1
+push this 4
+pop local 3
+push constant 512
+push this 5
+sub
+pop local 2
+push this 9
+push local 1
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 9
+push constant 15
+sub
+pop this 9
+goto IF_END0
+label IF_FALSE0
+push this 9
+push local 0
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 9
+push constant 15
+add
+pop this 9
+goto IF_END1
+label IF_FALSE1
+push this 8
+push local 2
+gt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 8
+push constant 15
+sub
+pop this 8
+goto IF_END2
+label IF_FALSE2
+push this 8
+push local 3
+lt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push constant 15
+add
+pop this 8
+label IF_FALSE3
+label IF_END2
+label IF_END1
+label IF_END0
+push constant 0
+return
+function Monster.getX 0
+push argument 0
+pop pointer 0
+push this 8
+return
+function Monster.getY 0
+push argument 0
+pop pointer 0
+push this 9
+return
+function Monster.getLeftBuffer 0
+push argument 0
+pop pointer 0
+push this 4
+return
+function Monster.getRightBuffer 0
+push argument 0
+pop pointer 0
+push this 5
+return
+function Monster.getHit 0
+push argument 0
+pop pointer 0
+push this 1
+push argument 1
+sub
+pop this 1
+push constant 0
+return
+function Monster.hasHealth 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+pop local 0
+label IF_FALSE0
+push local 0
+return

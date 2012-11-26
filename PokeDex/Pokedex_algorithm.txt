@@ -1,0 +1,45 @@
+/**
+ * 
+ * AUTHORS: Maria Deslis, Anastasia Shpurik
+ * PROGRAM: PokeDex
+ * LANGUAGE: Jack
+ * 
+ * CSCI410 Bakos Fall 2012 CSM
+ *
+ */
+
+ Game Logic:
+ We have 8 pairs (16 total cards)
+ We can have a counter for the number of pairs.
+ Start counter=0
+ while (counter < 8) 
+  press first square
+  flip the square to reveal card (flip_up)
+  press second square
+  flip the square to reveal card (flip_up)
+    if the cards are not equal to each other
+      flip them back over (make black squares) (flip_down)
+    if the cards are equal to each other
+      increment counter
+      remove the cards (make the spot white) (remove)
+  if counter==8
+    then inform the user that they won
+
+ The Cards:
+  can we upload images into Jack? 
+    either make them in paint or something
+    or find images online 
+  we can make a private int of each card object
+    number each card 0-7, so there will be duplicates
+  flip_up:
+    set the image to show up
+  flip_down: 
+    set the card to be a black square
+  remove:
+    set the card to be a white square
+
+ Gui: we need to display 4x4 grid of cards
+ need to implement mouseClickers 
+
+
+

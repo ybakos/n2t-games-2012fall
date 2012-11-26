@@ -1,0 +1,22 @@
+function Main.main 3
+push local 2
+call Exit.printWelcome 1
+pop temp 0
+push constant 2
+push constant 2
+push constant 30
+push local 2
+call Square.newSqr 4
+pop local 1
+push local 1
+push local 2
+call Game.new 2
+pop local 0
+push local 0
+call Game.run 1
+pop temp 0
+push local 0
+call Game.dispose 1
+pop temp 0
+push constant 0
+return

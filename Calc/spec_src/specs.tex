@@ -1,0 +1,43 @@
+\section{Objective}
+    In a quest to spread the joys of using a Reverse Polish Notation (RPN)
+    Calculator, and the efficiency of the stack, a basic calculator will be
+    presented. This calculator will do most everything a calculator should, it
+    will add, subtract, multiply, and divide. The only difference to a regular
+    calculator, will be in its strange, to most, operational syntax.
+
+\section{Postfix vs. Infix}
+    RPN style calculators have been around for a while and are definitely not a
+    new concept, and were born out of simplicity. RPN does math using postfix
+    notation, meaning input looks like \texttt{2 5 +}. Infix, what we think of
+    when we think calculator these days, uses notation that is very similar
+    (sometimes identical) to how we actually write math, \texttt{2 + 5}. Infix
+    lends itself to readability, while postfix lends itself to efficiency.
+
+\section{Goals}
+    \begin{itemize}
+        \item Basic REPL, for user interface
+        \item A working stack
+        \item 4 basic mathematical operations: + - * /
+    \end{itemize}
+    \subsection{Secondary Goals}
+        \begin{itemize}
+            \item Display of top items on stack on screen
+            \item Additional math operations: sqrt and pow
+            \item Stack manipulation: swap and dup
+            \item (Really ambitious) User variables
+        \end{itemize}
+
+\section{Concerns}
+    The biggest concern going into this project will be the limited ROM and RAM of
+    the Jack machine. Additionally the limited standard library of the Jack
+    language will prove to be quite challenging, since a lot of underlying data
+    structures will have to be implemented.
+
+\section{User Interface}
+    The user interface will be a simple text based interface. The user will have
+    a basic input line at bottom of line. Bad input checking will be minimal at
+    best so the program is relying on the user to enter valid input.
+    Additionally every element to the stack must be entered separately,
+    simply separating elements with spaces will not be accepted. While this
+    interface may sound limited to other similar programs (dc), it does not at all
+    reduce the functionality.

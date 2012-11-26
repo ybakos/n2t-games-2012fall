@@ -1,0 +1,426 @@
+function JSSplash.new 0
+push constant 1
+call Memory.alloc 1
+pop pointer 0
+push pointer 0
+return
+function JSSplash.markScreen 3
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push constant 0
+pop local 1
+push constant 0
+pop local 2
+label WHILE_EXP0
+push local 0
+push constant 23
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 1
+push constant 0
+pop local 2
+label WHILE_EXP1
+push local 1
+push constant 64
+lt
+not
+if-goto WHILE_END1
+push local 0
+push local 1
+call Output.moveCursor 2
+pop temp 0
+push local 2
+call Output.printInt 1
+pop temp 0
+push local 2
+push constant 1
+add
+pop local 2
+push local 2
+push constant 10
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop local 2
+label IF_FALSE0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function JSSplash.startScreen 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 11
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 8
+call String.new 1
+push constant 74
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 107
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 12
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 28
+call String.new 1
+push constant 78
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 67
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 77
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 120
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 77
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 122
+call String.appendChar 2
+push constant 122
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 21
+push constant 21
+call Output.moveCursor 2
+pop temp 0
+push constant 22
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 75
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+return
+function JSSplash.gameOver 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 10
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 9
+call String.new 1
+push constant 71
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+return
+function JSSplash.roundWon 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 10
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 9
+call String.new 1
+push constant 82
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+return
+function JSSplash.roundOver 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 10
+push constant 27
+call Output.moveCursor 2
+pop temp 0
+push constant 10
+call String.new 1
+push constant 82
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 12
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 6
+call String.new 1
+push constant 83
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push argument 1
+push constant 100
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1
+call String.new 1
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push argument 1
+push constant 10
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 1
+call String.new 1
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label IF_FALSE1
+label IF_FALSE0
+push argument 1
+call Output.printInt 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+return
+function JSSplash.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

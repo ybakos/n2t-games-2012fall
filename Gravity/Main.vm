@@ -1,0 +1,217 @@
+function Main.main 22
+push constant 300
+pop local 17
+push constant 1
+pop local 18
+push constant 100
+pop local 20
+push constant 2
+pop local 21
+push constant 0
+push local 20
+call Math.multiply 2
+pop local 0
+push constant 0
+push local 20
+call Math.multiply 2
+pop local 1
+push constant 250
+pop local 12
+push constant 125
+pop local 13
+push local 12
+push constant 50
+sub
+push local 20
+call Math.multiply 2
+pop local 6
+push local 13
+push constant 50
+sub
+push local 20
+call Math.multiply 2
+pop local 7
+push constant 15
+pop local 4
+push constant 15
+pop local 5
+label WHILE_EXP0
+push constant 0
+not
+not
+if-goto WHILE_END0
+push constant 100
+pop local 19
+push constant 3
+pop local 16
+call Keyboard.keyPressed 0
+push constant 90
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 0
+push constant 0
+push constant 510
+push constant 254
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE0
+call Keyboard.keyPressed 0
+push constant 131
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 1
+push constant 50
+sub
+pop local 1
+label IF_FALSE1
+call Keyboard.keyPressed 0
+push constant 133
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 1
+push constant 50
+add
+pop local 1
+label IF_FALSE2
+call Keyboard.keyPressed 0
+push constant 130
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 0
+push constant 50
+sub
+pop local 0
+label IF_FALSE3
+call Keyboard.keyPressed 0
+push constant 132
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 0
+push constant 50
+add
+pop local 0
+label IF_FALSE4
+push local 16
+push local 0
+push local 6
+sub
+push local 19
+call Math.divide 2
+call Math.multiply 2
+pop local 2
+push local 16
+push local 1
+push local 7
+sub
+push local 19
+call Math.divide 2
+call Math.multiply 2
+pop local 3
+push local 4
+push local 2
+push local 18
+call Math.multiply 2
+add
+pop local 4
+push local 5
+push local 3
+push local 18
+call Math.multiply 2
+add
+pop local 5
+push local 6
+push local 4
+push local 18
+call Math.multiply 2
+add
+pop local 6
+push local 7
+push local 5
+push local 18
+call Math.multiply 2
+add
+pop local 7
+push local 6
+push local 20
+call Math.divide 2
+push local 12
+add
+pop local 8
+push local 7
+push local 20
+call Math.divide 2
+push local 13
+add
+pop local 9
+push local 0
+push local 20
+call Math.divide 2
+push local 12
+add
+pop local 10
+push local 1
+push local 20
+call Math.divide 2
+push local 13
+add
+pop local 11
+push local 8
+push constant 0
+gt
+push local 8
+push constant 500
+lt
+and
+push local 9
+push constant 0
+gt
+push local 9
+push constant 244
+lt
+and
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push local 8
+push local 9
+push local 8
+push constant 5
+add
+push local 9
+push constant 5
+add
+call Screen.drawRectangle 4
+pop temp 0
+push local 10
+push local 11
+push local 10
+push constant 10
+add
+push local 11
+push constant 10
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_FALSE5
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return

@@ -1,0 +1,91 @@
+function Entity.new 0
+push constant 6
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 1
+pop this 2
+push argument 2
+pop this 4
+push constant 1
+neg
+pop this 5
+push argument 3
+pop this 3
+push pointer 0
+return
+function Entity.getSymbol 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Entity.getHP 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Entity.getMaxHP 0
+push argument 0
+pop pointer 0
+push this 2
+return
+function Entity.isAlive 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 0
+gt
+return
+function Entity.getDamage 0
+push argument 0
+pop pointer 0
+push this 3
+return
+function Entity.setLocation 0
+push argument 0
+pop pointer 0
+push this 4
+pop this 5
+push argument 1
+pop this 4
+push constant 0
+return
+function Entity.takeDamage 0
+push argument 0
+pop pointer 0
+push this 1
+push argument 1
+sub
+pop this 1
+push this 1
+push this 2
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 2
+pop this 1
+label IF_FALSE0
+push constant 0
+return
+function Entity.getLastLocation 0
+push argument 0
+pop pointer 0
+push this 5
+return
+function Entity.getLocation 0
+push argument 0
+pop pointer 0
+push this 4
+return
+function Entity.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

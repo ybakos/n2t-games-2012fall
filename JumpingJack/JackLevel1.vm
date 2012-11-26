@@ -1,0 +1,247 @@
+function JackLevel1.new 2
+push constant 7
+call Memory.alloc 1
+pop pointer 0
+push constant 150
+push constant 150
+push constant 30
+push constant 20
+call Jack.new 4
+pop this 1
+push constant 3
+call Array.new 1
+pop this 2
+push constant 0
+pop this 0
+push constant 3
+pop this 3
+push constant 0
+push this 2
+add
+push constant 100
+push constant 210
+call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push this 2
+add
+push constant 230
+push constant 180
+call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 2
+add
+push constant 10
+push constant 10
+call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 430
+push constant 213
+call Door.new 2
+pop this 4
+push this 4
+push constant 430
+push constant 213
+call Door.draw 3
+pop temp 0
+push constant 380
+push constant 163
+call Key.new 2
+pop this 5
+push this 5
+call Key.draw 1
+pop temp 0
+push constant 0
+pop local 1
+label WHILE_EXP0
+push local 1
+push this 3
+lt
+not
+if-goto WHILE_END0
+push local 1
+push this 2
+add
+pop pointer 1
+push that 0
+pop local 0
+push local 0
+call Block.draw 1
+pop temp 0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push pointer 0
+return
+function JackLevel1.dispose 2
+push argument 0
+pop pointer 0
+push this 1
+call Jack.dispose 1
+pop temp 0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push this 3
+lt
+not
+if-goto WHILE_END0
+push local 0
+push this 2
+add
+pop pointer 1
+push that 0
+pop local 1
+push local 1
+call Memory.deAlloc 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push this 4
+call Memory.deAlloc 1
+pop temp 0
+push this 5
+call Memory.deAlloc 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function JackLevel1.run 3
+push argument 0
+pop pointer 0
+push this 1
+call Jack.forceDraw 1
+pop temp 0
+label WHILE_EXP0
+push this 0
+not
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 0
+push local 0
+push constant 88
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push this 1
+push local 0
+call Jack.update 2
+pop temp 0
+push pointer 0
+call JackLevel1.update 1
+pop temp 0
+push pointer 0
+call JackLevel1.draw 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+not
+return
+function JackLevel1.update 2
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push this 3
+lt
+not
+if-goto WHILE_END0
+push local 0
+push this 2
+add
+pop pointer 1
+push that 0
+pop local 1
+push local 1
+push this 1
+call Block.collide 2
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push this 5
+push this 1
+call Key.collide 2
+push this 6
+push constant 1
+eq
+not
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 5
+call Key.undraw 1
+pop temp 0
+push this 6
+push constant 1
+add
+pop this 6
+label IF_FALSE0
+push this 4
+push this 1
+call Door.collide 2
+push this 6
+push constant 0
+eq
+not
+and
+pop this 0
+push this 4
+push this 1
+call Door.collide 2
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push constant 430
+push constant 213
+call Door.draw 3
+pop temp 0
+label IF_FALSE1
+push constant 10
+call Sys.wait 1
+pop temp 0
+push constant 0
+return
+function JackLevel1.draw 0
+push argument 0
+pop pointer 0
+push this 1
+call Jack.draw 1
+pop temp 0
+push constant 0
+return

@@ -1,0 +1,314 @@
+function Cell.new 0
+push constant 4
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push pointer 0
+call Cell.kill 1
+pop temp 0
+push pointer 0
+return
+function Cell.birth 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+pop this 2
+push constant 0
+return
+function Cell.kill 0
+push argument 0
+pop pointer 0
+push constant 0
+pop this 2
+push constant 0
+return
+function Cell.isAlive 0
+push argument 0
+pop pointer 0
+push this 2
+return
+function Cell.draw 0
+push argument 0
+pop pointer 0
+push this 2
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+label IF_END0
+push this 0
+push constant 32
+call Math.multiply 2
+push constant 3
+add
+push this 1
+push constant 32
+call Math.multiply 2
+push constant 3
+add
+push this 0
+push constant 1
+add
+push constant 32
+call Math.multiply 2
+push constant 3
+sub
+push this 1
+push constant 1
+add
+push constant 32
+call Math.multiply 2
+push constant 3
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Cell.prepare 6
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 15
+pop local 1
+goto IF_END0
+label IF_FALSE0
+push this 0
+push constant 1
+sub
+pop local 1
+label IF_END0
+push this 1
+push constant 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 7
+pop local 2
+goto IF_END1
+label IF_FALSE1
+push this 1
+push constant 1
+sub
+pop local 2
+label IF_END1
+push this 0
+push constant 15
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+pop local 3
+goto IF_END2
+label IF_FALSE2
+push this 0
+push constant 1
+add
+pop local 3
+label IF_END2
+push this 1
+push constant 7
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+pop local 4
+goto IF_END3
+label IF_FALSE3
+push this 1
+push constant 1
+add
+pop local 4
+label IF_END3
+push local 1
+push local 2
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE4
+push this 0
+push local 2
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE5
+push local 3
+push local 2
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE6
+push local 1
+push this 1
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE7
+push local 3
+push this 1
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE8
+push local 1
+push local 4
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE9
+push this 0
+push local 4
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE10
+push local 3
+push local 4
+call GOL.getCell 2
+pop local 5
+push local 5
+call Cell.isAlive 1
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE11
+push this 2
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push local 0
+push constant 2
+lt
+push local 0
+push constant 3
+gt
+or
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push constant 0
+pop this 3
+goto IF_END13
+label IF_FALSE13
+push constant 0
+not
+pop this 3
+label IF_END13
+goto IF_END12
+label IF_FALSE12
+push local 0
+push constant 3
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push constant 0
+not
+pop this 3
+goto IF_END14
+label IF_FALSE14
+push constant 0
+pop this 3
+label IF_END14
+label IF_END12
+push constant 0
+return
+function Cell.execute 0
+push argument 0
+pop pointer 0
+push this 3
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Cell.birth 1
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push pointer 0
+call Cell.kill 1
+pop temp 0
+label IF_END0
+push constant 0
+return

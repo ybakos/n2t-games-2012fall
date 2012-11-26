@@ -1,0 +1,224 @@
+function GOL.go 0
+call GOL.drawEmptyBoard 0
+pop temp 0
+call GOL.initCells 0
+pop static 0
+call GamePlay.EntryMode 0
+pop temp 0
+call GamePlay.Life 0
+pop temp 0
+push constant 0
+return
+function GOL.drawEmptyBoard 1
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 16
+lt
+not
+if-goto WHILE_END0
+push local 0
+push constant 32
+call Math.multiply 2
+push constant 0
+push local 0
+push constant 32
+call Math.multiply 2
+push constant 255
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 8
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push local 0
+push constant 32
+call Math.multiply 2
+push constant 511
+push local 0
+push constant 32
+call Math.multiply 2
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function GOL.drawBoard 3
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 16
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 1
+label WHILE_EXP1
+push local 1
+push constant 8
+lt
+not
+if-goto WHILE_END1
+push local 0
+push local 1
+call GOL.getCell 2
+pop local 2
+push local 2
+call Cell.draw 1
+pop temp 0
+push argument 1
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 0
+push argument 0
+call Cursor.getX 1
+eq
+push local 1
+push argument 0
+call Cursor.getY 1
+eq
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push argument 0
+call Cursor.getX 1
+push argument 0
+call Cursor.getY 1
+call GOL.getCell 2
+pop local 2
+push argument 0
+push local 2
+call Cell.isAlive 1
+call Cursor.draw 2
+pop temp 0
+label IF_FALSE1
+label IF_FALSE0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function GOL.initCells 5
+push constant 16
+call Array.new 1
+pop local 2
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 16
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 1
+push constant 8
+call Array.new 1
+pop local 3
+label WHILE_EXP1
+push local 1
+push constant 8
+lt
+not
+if-goto WHILE_END1
+push local 0
+push local 1
+call Cell.new 2
+pop local 4
+push local 1
+push local 3
+add
+push local 4
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push local 2
+add
+push local 3
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push local 2
+return
+function GOL.isAlive 1
+push argument 0
+push argument 1
+call GOL.getCell 2
+pop local 0
+push local 0
+call Cell.isAlive 1
+return
+function GOL.getCell 2
+push argument 0
+push static 0
+add
+pop pointer 1
+push that 0
+pop local 0
+push argument 1
+push local 0
+add
+pop pointer 1
+push that 0
+pop local 1
+push local 1
+return
+function GOL.birth 1
+push argument 0
+push argument 1
+call GOL.getCell 2
+pop local 0
+push local 0
+call Cell.birth 1
+pop temp 0
+push constant 0
+return
+function GOL.kill 1
+push argument 0
+push argument 1
+call GOL.getCell 2
+pop local 0
+push local 0
+call Cell.kill 1
+pop temp 0
+push constant 0
+return

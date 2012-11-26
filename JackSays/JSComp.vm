@@ -1,0 +1,52 @@
+function JSComp.new 0
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push this 0
+call Array.new 1
+pop this 1
+push pointer 0
+call JSComp.populateSequence 1
+pop temp 0
+push pointer 0
+return
+function JSComp.populateSequence 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push constant 42
+call JSRandom.setSeed 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+push this 0
+lt
+not
+if-goto WHILE_END0
+push local 0
+push this 1
+add
+push constant 3
+call JSRandom.randRange 1
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function JSComp.getSequence 0
+push argument 0
+pop pointer 0
+push this 1
+return

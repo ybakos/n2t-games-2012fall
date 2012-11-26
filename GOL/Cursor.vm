@@ -1,0 +1,106 @@
+function Cursor.new 0
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop argument 0
+push argument 1
+pop argument 1
+push pointer 0
+return
+function Cursor.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Cursor.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Cursor.moveUp 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 0
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+push constant 1
+sub
+pop this 1
+label IF_FALSE0
+push constant 0
+return
+function Cursor.moveDown 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 8
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+push constant 1
+add
+pop this 1
+label IF_FALSE0
+push constant 0
+return
+function Cursor.moveLeft 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 0
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push constant 1
+sub
+pop this 0
+label IF_FALSE0
+push constant 0
+return
+function Cursor.moveRight 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 16
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push constant 1
+add
+pop this 0
+label IF_FALSE0
+push constant 0
+return
+function Cursor.draw 0
+push argument 0
+pop pointer 0
+push argument 1
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 32
+call Math.multiply 2
+push constant 16
+add
+push this 1
+push constant 32
+call Math.multiply 2
+push constant 16
+add
+push constant 10
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+return

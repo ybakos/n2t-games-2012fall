@@ -1,0 +1,89 @@
+function Main.main 4
+push constant 0
+pop local 0
+push constant 255
+push constant 127
+call Cursor.new 2
+pop local 2
+push local 2
+call Cursor.draw 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+not
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 1
+push local 1
+push constant 132
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 2
+call Cursor.moveRight 1
+pop temp 0
+label IF_FALSE0
+push local 1
+push constant 130
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 2
+call Cursor.moveLeft 1
+pop temp 0
+label IF_FALSE1
+push local 1
+push constant 133
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 2
+call Cursor.moveDown 1
+pop temp 0
+label IF_FALSE2
+push local 1
+push constant 131
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 2
+call Cursor.moveUp 1
+pop temp 0
+label IF_FALSE3
+push local 1
+push constant 67
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+call Screen.clearScreen 0
+pop temp 0
+label IF_FALSE4
+push local 1
+push constant 81
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+pop local 0
+label IF_FALSE5
+push local 2
+call Cursor.draw 1
+pop temp 0
+push constant 6
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push local 2
+call Cursor.dispose 1
+pop temp 0
+push constant 0
+return

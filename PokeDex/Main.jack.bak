@@ -1,0 +1,18 @@
+/**
+ * This is our driver file
+ * The Main class initializes a new PokeDex Game 
+ *
+ */
+
+class Main {
+	
+	function void main() {
+		var PokeDex game;
+
+		let game = PokeDex.new()
+		do game.run();
+		do game.dispose();
+		return;
+	}
+}
+	

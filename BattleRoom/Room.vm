@@ -1,0 +1,834 @@
+function Room.new 0
+push constant 6
+call Memory.alloc 1
+pop pointer 0
+push constant 23
+pop this 0
+push this 0
+push this 0
+call Math.multiply 2
+pop this 2
+push argument 0
+pop this 3
+push pointer 0
+push this 3
+call Room.getLevel 2
+pop temp 0
+push constant 89
+push constant 100
+push constant 0
+push constant 10
+call Entity.new 4
+pop this 5
+push pointer 0
+return
+function Room.draw 4
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push constant 0
+pop local 1
+push this 2
+push this 0
+add
+call String.new 1
+pop local 2
+label WHILE_EXP0
+push local 1
+push this 2
+lt
+not
+if-goto WHILE_END0
+push local 2
+push constant 46
+call String.appendChar 2
+pop temp 0
+push local 0
+push this 0
+push constant 1
+sub
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 2
+push constant 128
+call String.appendChar 2
+pop temp 0
+push constant 0
+pop local 0
+goto IF_END0
+label IF_FALSE0
+push local 0
+push constant 1
+add
+pop local 0
+label IF_END0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push local 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push local 2
+call String.dispose 1
+pop temp 0
+push constant 0
+return
+function Room.drawEntities 6
+push argument 0
+pop pointer 0
+push pointer 0
+call Room.draw 1
+pop temp 0
+push constant 0
+pop local 4
+label WHILE_EXP0
+push local 4
+push this 1
+lt
+not
+if-goto WHILE_END0
+push local 4
+push this 4
+add
+pop pointer 1
+push that 0
+pop local 0
+push local 0
+call Entity.getSymbol 1
+pop local 1
+push local 0
+call Entity.getLocation 1
+pop local 2
+push local 0
+call Entity.getLastLocation 1
+pop local 3
+push local 0
+call Entity.isAlive 1
+pop local 5
+push local 5
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+push local 1
+push local 2
+call Room.drawSymbol 3
+pop temp 0
+label IF_FALSE0
+push local 4
+push constant 1
+add
+pop local 4
+goto WHILE_EXP0
+label WHILE_END0
+push this 5
+pop local 0
+push local 0
+call Entity.getSymbol 1
+pop local 1
+push local 0
+call Entity.getLocation 1
+pop local 2
+push local 0
+call Entity.getLastLocation 1
+pop local 3
+push local 2
+push local 3
+eq
+not
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+push constant 46
+push local 3
+call Room.drawSymbol 3
+pop temp 0
+push pointer 0
+push local 1
+push local 2
+call Room.drawSymbol 3
+pop temp 0
+label IF_FALSE1
+push constant 0
+pop local 0
+push constant 0
+return
+function Room.drawSymbol 2
+push argument 0
+pop pointer 0
+push argument 2
+push this 0
+call Math.divide 2
+pop local 0
+push pointer 0
+push argument 2
+push this 0
+call Room.modulus 3
+pop local 1
+push local 0
+push local 1
+call Output.moveCursor 2
+pop temp 0
+push argument 1
+call Output.printChar 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 0
+return
+function Room.drawInformation 2
+push argument 0
+pop pointer 0
+push this 5
+call Entity.getHP 1
+pop local 0
+push this 5
+call Entity.getMaxHP 1
+pop local 1
+push constant 5
+push constant 30
+call Output.moveCursor 2
+pop temp 0
+push constant 6
+call String.new 1
+push constant 76
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push this 3
+call Output.printInt 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 6
+push constant 30
+call Output.moveCursor 2
+pop temp 0
+push constant 3
+call String.new 1
+push constant 72
+call String.appendChar 2
+push constant 80
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push local 0
+call Output.printInt 1
+pop temp 0
+push constant 1
+call String.new 1
+push constant 47
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push local 1
+call Output.printInt 1
+pop temp 0
+push constant 8
+push constant 30
+call Output.moveCursor 2
+pop temp 0
+push constant 7
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 45
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 9
+push constant 30
+call Output.moveCursor 2
+pop temp 0
+push constant 9
+call String.new 1
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 45
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 0
+return
+function Room.checkCollision 4
+push argument 0
+pop pointer 0
+push constant 0
+pop local 1
+label WHILE_EXP0
+push local 1
+push this 1
+lt
+not
+if-goto WHILE_END0
+push local 1
+push this 4
+add
+pop pointer 1
+push that 0
+pop local 0
+push local 0
+call Entity.getLocation 1
+pop local 2
+push local 0
+call Entity.isAlive 1
+pop local 3
+push argument 1
+push local 2
+eq
+push local 3
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+return
+label IF_FALSE0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+pop local 0
+push constant 1
+neg
+return
+function Room.isFinished 3
+push argument 0
+pop pointer 0
+push constant 0
+pop local 1
+push this 5
+call Entity.isAlive 1
+pop local 2
+push local 2
+not
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+label WHILE_EXP0
+push local 1
+push this 1
+lt
+not
+if-goto WHILE_END0
+push local 1
+push this 4
+add
+pop pointer 1
+push that 0
+pop local 0
+push local 0
+call Entity.isAlive 1
+pop local 2
+push local 2
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+return
+label IF_FALSE1
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+not
+return
+function Room.run 13
+push argument 0
+pop pointer 0
+push constant 0
+pop local 1
+push constant 0
+pop local 0
+push constant 1
+neg
+pop local 10
+push constant 0
+not
+pop local 2
+push pointer 0
+call Room.draw 1
+pop temp 0
+push pointer 0
+call Room.drawEntities 1
+pop temp 0
+push pointer 0
+call Room.drawInformation 1
+pop temp 0
+label WHILE_EXP0
+push local 2
+push pointer 0
+call Room.isFinished 1
+not
+and
+not
+if-goto WHILE_END0
+label WHILE_EXP1
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END1
+call Keyboard.keyPressed 0
+pop local 0
+push local 1
+push local 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop local 0
+goto IF_END0
+label IF_FALSE0
+push constant 0
+pop local 1
+label IF_END0
+push constant 5
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP1
+label WHILE_END1
+push this 5
+call Entity.getLocation 1
+pop local 5
+push local 0
+push constant 87
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+pop local 10
+push constant 2
+pop local 11
+label IF_FALSE1
+push local 0
+push constant 65
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 1
+pop local 10
+push constant 3
+pop local 11
+label IF_FALSE2
+push local 0
+push constant 83
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 2
+pop local 10
+push constant 0
+pop local 11
+label IF_FALSE3
+push local 0
+push constant 68
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 3
+pop local 10
+push constant 1
+pop local 11
+label IF_FALSE4
+push local 0
+push constant 140
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+pop local 2
+label IF_FALSE5
+push local 10
+push constant 1
+neg
+gt
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push pointer 0
+push local 5
+push local 10
+call Room.translateLoc 3
+pop local 3
+push pointer 0
+push local 3
+call Room.checkCollision 2
+pop local 6
+push local 6
+push constant 0
+lt
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 5
+push local 3
+call Entity.setLocation 2
+pop temp 0
+push this 5
+push this 3
+neg
+push constant 2
+call Math.divide 2
+call Entity.takeDamage 2
+pop temp 0
+push constant 0
+pop local 8
+label WHILE_EXP2
+push local 8
+push this 1
+lt
+not
+if-goto WHILE_END2
+push local 8
+push this 4
+add
+pop pointer 1
+push that 0
+pop local 12
+push local 12
+call Entity.getLocation 1
+pop local 9
+push pointer 0
+push local 9
+push local 11
+call Room.translateLoc 3
+pop local 4
+push pointer 0
+push local 4
+call Room.checkCollision 2
+pop local 6
+push local 4
+push local 3
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 1
+pop local 6
+label IF_FALSE8
+push local 6
+push constant 0
+lt
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push local 12
+push local 4
+call Entity.setLocation 2
+pop temp 0
+label IF_FALSE9
+push local 8
+push constant 1
+add
+pop local 8
+goto WHILE_EXP2
+label WHILE_END2
+goto IF_END7
+label IF_FALSE7
+push this 5
+call Entity.getDamage 1
+pop local 7
+push local 6
+push this 4
+add
+pop pointer 1
+push that 0
+pop local 12
+push local 12
+push local 7
+call Entity.takeDamage 2
+pop temp 0
+push this 5
+push this 3
+call Entity.takeDamage 2
+pop temp 0
+label IF_END7
+label IF_FALSE6
+push pointer 0
+call Room.drawEntities 1
+pop temp 0
+push pointer 0
+call Room.drawInformation 1
+pop temp 0
+push local 0
+pop local 1
+push constant 0
+pop local 0
+push constant 0
+pop local 3
+push constant 1
+neg
+pop local 10
+goto WHILE_EXP0
+label WHILE_END0
+call Screen.clearScreen 0
+pop temp 0
+push this 5
+call Entity.isAlive 1
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 0
+not
+return
+goto IF_END10
+label IF_FALSE10
+push constant 0
+return
+label IF_END10
+function Room.translateLoc 2
+push argument 0
+pop pointer 0
+push argument 1
+pop local 0
+push pointer 0
+push argument 1
+push this 0
+call Room.modulus 3
+pop local 1
+push argument 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 1
+push this 0
+sub
+pop local 0
+label IF_FALSE0
+push argument 2
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 1
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push argument 1
+pop local 0
+goto IF_END2
+label IF_FALSE2
+push argument 1
+push constant 1
+sub
+pop local 0
+label IF_END2
+label IF_FALSE1
+push argument 2
+push constant 2
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push argument 1
+push this 0
+add
+pop local 0
+label IF_FALSE3
+push argument 2
+push constant 3
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 1
+push this 0
+push constant 1
+sub
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push argument 1
+pop local 0
+goto IF_END5
+label IF_FALSE5
+push argument 1
+push constant 1
+add
+pop local 0
+label IF_END5
+label IF_FALSE4
+push local 0
+push constant 0
+lt
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push argument 1
+pop local 0
+label IF_FALSE6
+push local 0
+push this 2
+push constant 1
+sub
+gt
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push argument 1
+pop local 0
+label IF_FALSE7
+push local 0
+return
+function Room.getLevel 2
+push argument 0
+pop pointer 0
+push argument 1
+push constant 2
+call Math.multiply 2
+pop this 1
+push this 1
+call Array.new 1
+pop this 4
+push this 2
+push constant 1
+sub
+pop local 1
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push this 1
+lt
+not
+if-goto WHILE_END0
+push local 0
+push this 4
+add
+push constant 69
+push this 1
+push local 1
+push argument 1
+call Entity.new 4
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+push local 1
+push constant 2
+sub
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Room.modulus 1
+push argument 0
+pop pointer 0
+push argument 1
+pop local 0
+label WHILE_EXP0
+push local 0
+push argument 2
+push constant 1
+sub
+gt
+not
+if-goto WHILE_END0
+push local 0
+push argument 2
+sub
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push local 0
+push constant 0
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop local 0
+label IF_FALSE0
+push local 0
+return
+function Room.dispose 0
+push argument 0
+pop pointer 0
+push this 5
+call Memory.deAlloc 1
+pop temp 0
+push this 4
+call Array.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

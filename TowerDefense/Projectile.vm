@@ -1,0 +1,261 @@
+function Projectile.new 0
+push constant 7
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+push argument 3
+pop this 3
+push constant 0
+pop this 5
+push pointer 0
+return
+function Projectile.update 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Projectile.erase 1
+pop temp 0
+push this 0
+push argument 1
+push argument 2
+call Rectangle.update 3
+pop temp 0
+push pointer 0
+call Projectile.draw 1
+pop temp 0
+push constant 0
+return
+function Projectile.draw 0
+push argument 0
+pop pointer 0
+push this 0
+call Rectangle.draw 1
+pop temp 0
+push constant 0
+return
+function Projectile.erase 0
+push argument 0
+pop pointer 0
+push this 0
+call Rectangle.erase 1
+pop temp 0
+push constant 0
+return
+function Projectile.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Projectile.dmg 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Projectile.moveToClosestCreep 4
+push argument 0
+pop pointer 0
+push this 5
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop local 1
+push constant 10000
+pop local 3
+label WHILE_EXP0
+push local 1
+push argument 1
+call Vector.size 1
+lt
+not
+if-goto WHILE_END0
+push argument 1
+push local 1
+call Vector.at 2
+pop local 0
+push local 0
+call Creep.getLoc 1
+pop local 2
+push local 2
+call Rectangle.x 1
+push this 0
+call Rectangle.x 1
+sub
+call Math.abs 1
+push local 2
+call Rectangle.y 1
+push this 0
+call Rectangle.y 1
+sub
+call Math.abs 1
+add
+push local 3
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 0
+call Creep.getLoc 1
+pop this 5
+push local 2
+call Rectangle.x 1
+push this 0
+call Rectangle.x 1
+sub
+call Math.abs 1
+push local 2
+call Rectangle.y 1
+push this 0
+call Rectangle.y 1
+sub
+call Math.abs 1
+add
+pop local 3
+push local 0
+pop this 6
+label IF_FALSE1
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+label IF_FALSE0
+push pointer 0
+push pointer 0
+push this 5
+call Rectangle.x 1
+push this 0
+call Rectangle.x 1
+sub
+push this 5
+call Rectangle.y 1
+push this 0
+call Rectangle.y 1
+sub
+call Projectile.normalizeX 3
+push pointer 0
+push this 5
+call Rectangle.x 1
+push this 0
+call Rectangle.x 1
+sub
+push this 5
+call Rectangle.y 1
+push this 0
+call Rectangle.y 1
+sub
+call Projectile.normalizeY 3
+call Projectile.update 3
+pop temp 0
+push this 0
+call Rectangle.x 1
+push this 5
+call Rectangle.x 1
+push constant 5
+sub
+gt
+push this 0
+call Rectangle.x 1
+push this 5
+call Rectangle.x 1
+push constant 5
+add
+lt
+and
+push this 0
+call Rectangle.y 1
+push this 5
+call Rectangle.y 1
+push constant 5
+sub
+gt
+and
+push this 0
+call Rectangle.y 1
+push this 5
+call Rectangle.y 1
+push constant 5
+add
+lt
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 6
+return
+goto IF_END2
+label IF_FALSE2
+push constant 0
+return
+label IF_END2
+function Projectile.normalizeX 1
+push argument 0
+pop pointer 0
+push argument 2
+push constant 2
+call Hardware.shl 2
+push argument 1
+push constant 2
+call Hardware.shl 2
+add
+call Math.abs 1
+call Math.sqrt 1
+pop local 0
+push local 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1
+return
+goto IF_END0
+label IF_FALSE0
+push constant 4
+push argument 1
+push local 0
+call Math.divide 2
+call Math.multiply 2
+return
+label IF_END0
+function Projectile.normalizeY 1
+push argument 0
+pop pointer 0
+push argument 2
+push constant 2
+call Hardware.shl 2
+push argument 1
+push constant 2
+call Hardware.shl 2
+add
+call Math.abs 1
+call Math.sqrt 1
+pop local 0
+push local 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1
+return
+goto IF_END0
+label IF_FALSE0
+push constant 4
+push argument 2
+push local 0
+call Math.divide 2
+call Math.multiply 2
+return
+label IF_END0

@@ -1,0 +1,9 @@
+Dots!
+
+To compile Dots, use the JackCompiler.sh (or .bat, if you're feeling sassy) included in the course's tools. Point the compiler at the Dots directory contained within this project, then let it do the hard stuff.
+
+Then, once the .vm files have been generated, open up the VM Emulator to play the game. Load the program (not the script!), pointing to the Dots directory once again. Set the animation level to none, and the simulation speed to fast, then you're off to the races!
+
+To actually play the game, select one or two players from the intro screen. From there, give the program valid input moves, using the column and row names provided. Valid examples: AB1, AB2, A12, CD4, etc. Invalid examples: AB7, BA2, 2AB. You get the idea.
+
+Keep filling in edges, completing boxes to score points and take an extra turn. Once all the edges are filled the game is over, and you'll be presented with the option to play again. Do you dare?

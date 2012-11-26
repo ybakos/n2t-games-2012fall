@@ -1,0 +1,106 @@
+function Cursor.new 0
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push pointer 0
+call Cursor.draw 1
+pop temp 0
+push pointer 0
+return
+function Cursor.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Cursor.draw 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+return
+function Cursor.moveDown 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 1
+add
+push constant 254
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+push constant 1
+add
+pop this 1
+label IF_FALSE0
+push constant 0
+return
+function Cursor.moveUp 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 1
+sub
+push constant 1
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+push constant 1
+sub
+pop this 1
+label IF_FALSE0
+push constant 0
+return
+function Cursor.moveRight 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 1
+add
+push constant 510
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push constant 1
+add
+pop this 0
+label IF_FALSE0
+push constant 0
+return
+function Cursor.moveLeft 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 1
+sub
+push constant 1
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push constant 1
+sub
+pop this 0
+label IF_FALSE0
+push constant 0
+return

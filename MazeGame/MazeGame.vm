@@ -1,0 +1,4457 @@
+function MazeGame.new 0
+push constant 9
+call Memory.alloc 1
+pop pointer 0
+push constant 58
+call String.new 1
+push constant 78
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 122
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 113
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 35
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 67
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 119
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 39
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 112
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 49
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 102
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 119
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 98
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 47
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 112
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 44
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 98
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 119
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 17
+call String.new 1
+push constant 72
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 102
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Keyboard.readInt 1
+pop this 8
+push this 8
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop static 19
+label IF_FALSE0
+push this 8
+push constant 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+pop static 19
+label IF_FALSE1
+call Screen.clearScreen 0
+pop temp 0
+push constant 10
+push constant 230
+push constant 15
+call Square.new 3
+pop this 0
+push constant 470
+push constant 20
+push constant 10
+call Square.new 3
+pop this 1
+push constant 5
+push constant 5
+push constant 505
+push constant 5
+call Line.new 4
+pop this 2
+push constant 5
+push constant 249
+push constant 505
+push constant 249
+call Line.new 4
+pop this 2
+push constant 5
+push constant 5
+push constant 5
+push constant 249
+call Line.new 4
+pop this 2
+push constant 505
+push constant 249
+push constant 505
+push constant 5
+call Line.new 4
+pop this 2
+push constant 40
+push constant 35
+push constant 40
+push constant 249
+call Line.new 4
+pop this 2
+push constant 175
+push constant 5
+push constant 175
+push constant 214
+call Line.new 4
+pop this 2
+push constant 300
+push constant 249
+push constant 300
+push constant 40
+call Line.new 4
+pop this 2
+push constant 447
+push constant 5
+push constant 447
+push constant 214
+call Line.new 4
+pop this 2
+push constant 100
+push constant 150
+push constant 10
+call Circle.new 3
+pop this 3
+push constant 240
+push constant 125
+push constant 10
+call Circle.new 3
+pop this 4
+push constant 365
+push constant 143
+push constant 5
+call Circle.new 3
+pop this 5
+push constant 375
+push constant 157
+push constant 5
+call Circle.new 3
+pop this 6
+push constant 0
+pop this 7
+push constant 0
+not
+pop static 13
+push constant 0
+pop static 14
+push constant 0
+not
+pop static 15
+push constant 0
+pop static 16
+push constant 0
+pop static 17
+push constant 0
+not
+pop static 18
+push constant 0
+not
+pop static 0
+push constant 0
+pop static 1
+push constant 0
+pop static 2
+push constant 0
+pop static 3
+push constant 0
+pop static 4
+push constant 0
+pop static 5
+push constant 0
+pop static 6
+push constant 0
+pop static 7
+push constant 0
+pop static 8
+push constant 0
+pop static 9
+push constant 0
+pop static 10
+push constant 0
+pop static 11
+push constant 0
+pop static 12
+push pointer 0
+return
+function MazeGame.dispose 0
+push argument 0
+pop pointer 0
+push this 0
+call Square.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push this 2
+call Line.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push this 3
+call Circle.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push this 4
+call Circle.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push this 5
+call Circle.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push this 6
+call Circle.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function MazeGame.run 2
+push argument 0
+pop pointer 0
+push constant 0
+pop local 1
+label WHILE_EXP0
+push local 1
+not
+not
+if-goto WHILE_END0
+label WHILE_EXP1
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END1
+call Keyboard.keyPressed 0
+pop local 0
+push pointer 0
+call MazeGame.moveSquare 1
+pop temp 0
+push static 19
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call MazeGame.moveCircle 1
+pop temp 0
+label IF_FALSE0
+push this 0
+call Square.bottom 1
+push this 3
+call Circle.top 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+call Square.right 1
+push this 3
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 3
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE2
+label IF_FALSE1
+push this 0
+call Square.top 1
+push this 3
+call Circle.bottom 1
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 0
+call Square.right 1
+push this 3
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 3
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE4
+label IF_FALSE3
+push this 0
+call Square.right 1
+push this 3
+call Circle.left 1
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 0
+call Square.bottom 1
+push this 3
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 3
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE6
+label IF_FALSE5
+push this 0
+call Square.left 1
+push this 3
+call Circle.right 1
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 0
+call Square.bottom 1
+push this 3
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 3
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE8
+label IF_FALSE7
+push this 0
+call Square.bottom 1
+push this 4
+call Circle.top 1
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 0
+call Square.right 1
+push this 4
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 4
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE10
+label IF_FALSE9
+push this 0
+call Square.top 1
+push this 4
+call Circle.bottom 1
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push this 0
+call Square.right 1
+push this 4
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 4
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE12
+label IF_FALSE11
+push this 0
+call Square.right 1
+push this 4
+call Circle.left 1
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push this 0
+call Square.bottom 1
+push this 4
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 4
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE14
+label IF_FALSE13
+push this 0
+call Square.left 1
+push this 4
+call Circle.right 1
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push this 0
+call Square.bottom 1
+push this 4
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 4
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE16
+label IF_FALSE15
+push this 0
+call Square.bottom 1
+push this 5
+call Circle.top 1
+eq
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push this 0
+call Square.right 1
+push this 5
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 5
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE18
+label IF_FALSE17
+push this 0
+call Square.top 1
+push this 5
+call Circle.bottom 1
+eq
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push this 0
+call Square.right 1
+push this 5
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 5
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE20
+goto IF_FALSE20
+label IF_TRUE20
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE20
+label IF_FALSE19
+push this 0
+call Square.right 1
+push this 5
+call Circle.left 1
+eq
+if-goto IF_TRUE21
+goto IF_FALSE21
+label IF_TRUE21
+push this 0
+call Square.bottom 1
+push this 5
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 5
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE22
+goto IF_FALSE22
+label IF_TRUE22
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE22
+label IF_FALSE21
+push this 0
+call Square.left 1
+push this 5
+call Circle.right 1
+eq
+if-goto IF_TRUE23
+goto IF_FALSE23
+label IF_TRUE23
+push this 0
+call Square.bottom 1
+push this 5
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 5
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE24
+goto IF_FALSE24
+label IF_TRUE24
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE24
+label IF_FALSE23
+push this 0
+call Square.bottom 1
+push this 6
+call Circle.top 1
+eq
+if-goto IF_TRUE25
+goto IF_FALSE25
+label IF_TRUE25
+push this 0
+call Square.right 1
+push this 6
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 6
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE26
+goto IF_FALSE26
+label IF_TRUE26
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE26
+label IF_FALSE25
+push this 0
+call Square.top 1
+push this 6
+call Circle.bottom 1
+eq
+if-goto IF_TRUE27
+goto IF_FALSE27
+label IF_TRUE27
+push this 0
+call Square.right 1
+push this 6
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 6
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE28
+goto IF_FALSE28
+label IF_TRUE28
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE28
+label IF_FALSE27
+push this 0
+call Square.right 1
+push this 6
+call Circle.left 1
+eq
+if-goto IF_TRUE29
+goto IF_FALSE29
+label IF_TRUE29
+push this 0
+call Square.bottom 1
+push this 6
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 6
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE30
+goto IF_FALSE30
+label IF_TRUE30
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE30
+label IF_FALSE29
+push this 0
+call Square.left 1
+push this 6
+call Circle.right 1
+eq
+if-goto IF_TRUE31
+goto IF_FALSE31
+label IF_TRUE31
+push this 0
+call Square.bottom 1
+push this 6
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 6
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE32
+goto IF_FALSE32
+label IF_TRUE32
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE32
+label IF_FALSE31
+push this 0
+call Square.bottom 1
+push this 1
+call Square.top 1
+eq
+if-goto IF_TRUE33
+goto IF_FALSE33
+label IF_TRUE33
+push this 0
+call Square.right 1
+push this 1
+call Square.left 1
+gt
+push this 0
+call Square.left 1
+push this 1
+call Square.right 1
+lt
+and
+if-goto IF_TRUE34
+goto IF_FALSE34
+label IF_TRUE34
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE34
+label IF_FALSE33
+push this 0
+call Square.top 1
+push this 1
+call Square.bottom 1
+eq
+if-goto IF_TRUE35
+goto IF_FALSE35
+label IF_TRUE35
+push this 0
+call Square.right 1
+push this 1
+call Square.left 1
+gt
+push this 0
+call Square.left 1
+push this 1
+call Square.right 1
+lt
+and
+if-goto IF_TRUE36
+goto IF_FALSE36
+label IF_TRUE36
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE36
+label IF_FALSE35
+push this 0
+call Square.right 1
+push this 1
+call Square.left 1
+eq
+if-goto IF_TRUE37
+goto IF_FALSE37
+label IF_TRUE37
+push this 0
+call Square.bottom 1
+push this 1
+call Square.top 1
+gt
+push this 0
+call Square.top 1
+push this 1
+call Square.bottom 1
+lt
+and
+if-goto IF_TRUE38
+goto IF_FALSE38
+label IF_TRUE38
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE38
+label IF_FALSE37
+push this 0
+call Square.left 1
+push this 1
+call Square.right 1
+eq
+if-goto IF_TRUE39
+goto IF_FALSE39
+label IF_TRUE39
+push this 0
+call Square.bottom 1
+push this 1
+call Square.top 1
+gt
+push this 0
+call Square.top 1
+push this 1
+call Square.bottom 1
+lt
+and
+if-goto IF_TRUE40
+goto IF_FALSE40
+label IF_TRUE40
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE40
+label IF_FALSE39
+push constant 5
+pop this 7
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 81
+eq
+if-goto IF_TRUE41
+goto IF_FALSE41
+label IF_TRUE41
+push constant 0
+not
+pop local 1
+label IF_FALSE41
+push local 0
+push constant 90
+eq
+if-goto IF_TRUE42
+goto IF_FALSE42
+label IF_TRUE42
+push this 0
+call Square.decSize 1
+pop temp 0
+label IF_FALSE42
+push local 0
+push constant 88
+eq
+if-goto IF_TRUE43
+goto IF_FALSE43
+label IF_TRUE43
+push this 0
+call Square.incSize 1
+pop temp 0
+label IF_FALSE43
+push local 0
+push constant 131
+eq
+if-goto IF_TRUE44
+goto IF_FALSE44
+label IF_TRUE44
+push constant 1
+pop this 7
+label IF_FALSE44
+push local 0
+push constant 133
+eq
+if-goto IF_TRUE45
+goto IF_FALSE45
+label IF_TRUE45
+push constant 2
+pop this 7
+label IF_FALSE45
+push local 0
+push constant 130
+eq
+if-goto IF_TRUE46
+goto IF_FALSE46
+label IF_TRUE46
+push constant 3
+pop this 7
+label IF_FALSE46
+push local 0
+push constant 132
+eq
+if-goto IF_TRUE47
+goto IF_FALSE47
+label IF_TRUE47
+push constant 4
+pop this 7
+label IF_FALSE47
+label WHILE_EXP2
+push local 0
+push constant 0
+eq
+not
+not
+if-goto WHILE_END2
+call Keyboard.keyPressed 0
+pop local 0
+push pointer 0
+call MazeGame.moveSquare 1
+pop temp 0
+push static 19
+if-goto IF_TRUE48
+goto IF_FALSE48
+label IF_TRUE48
+push pointer 0
+call MazeGame.moveCircle 1
+pop temp 0
+label IF_FALSE48
+push this 0
+call Square.bottom 1
+push this 3
+call Circle.top 1
+eq
+if-goto IF_TRUE49
+goto IF_FALSE49
+label IF_TRUE49
+push this 0
+call Square.right 1
+push this 3
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 3
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE50
+goto IF_FALSE50
+label IF_TRUE50
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE50
+label IF_FALSE49
+push this 0
+call Square.top 1
+push this 3
+call Circle.bottom 1
+eq
+if-goto IF_TRUE51
+goto IF_FALSE51
+label IF_TRUE51
+push this 0
+call Square.right 1
+push this 3
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 3
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE52
+goto IF_FALSE52
+label IF_TRUE52
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE52
+label IF_FALSE51
+push this 0
+call Square.right 1
+push this 3
+call Circle.left 1
+eq
+if-goto IF_TRUE53
+goto IF_FALSE53
+label IF_TRUE53
+push this 0
+call Square.bottom 1
+push this 3
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 3
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE54
+goto IF_FALSE54
+label IF_TRUE54
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE54
+label IF_FALSE53
+push this 0
+call Square.left 1
+push this 3
+call Circle.right 1
+eq
+if-goto IF_TRUE55
+goto IF_FALSE55
+label IF_TRUE55
+push this 0
+call Square.bottom 1
+push this 3
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 3
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE56
+goto IF_FALSE56
+label IF_TRUE56
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE56
+label IF_FALSE55
+push this 0
+call Square.bottom 1
+push this 4
+call Circle.top 1
+eq
+if-goto IF_TRUE57
+goto IF_FALSE57
+label IF_TRUE57
+push this 0
+call Square.right 1
+push this 4
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 4
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE58
+goto IF_FALSE58
+label IF_TRUE58
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE58
+label IF_FALSE57
+push this 0
+call Square.top 1
+push this 4
+call Circle.bottom 1
+eq
+if-goto IF_TRUE59
+goto IF_FALSE59
+label IF_TRUE59
+push this 0
+call Square.right 1
+push this 4
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 4
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE60
+goto IF_FALSE60
+label IF_TRUE60
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE60
+label IF_FALSE59
+push this 0
+call Square.right 1
+push this 4
+call Circle.left 1
+eq
+if-goto IF_TRUE61
+goto IF_FALSE61
+label IF_TRUE61
+push this 0
+call Square.bottom 1
+push this 4
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 4
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE62
+goto IF_FALSE62
+label IF_TRUE62
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE62
+label IF_FALSE61
+push this 0
+call Square.left 1
+push this 4
+call Circle.right 1
+eq
+if-goto IF_TRUE63
+goto IF_FALSE63
+label IF_TRUE63
+push this 0
+call Square.bottom 1
+push this 4
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 4
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE64
+goto IF_FALSE64
+label IF_TRUE64
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE64
+label IF_FALSE63
+push this 0
+call Square.bottom 1
+push this 5
+call Circle.top 1
+eq
+if-goto IF_TRUE65
+goto IF_FALSE65
+label IF_TRUE65
+push this 0
+call Square.right 1
+push this 5
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 5
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE66
+goto IF_FALSE66
+label IF_TRUE66
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE66
+label IF_FALSE65
+push this 0
+call Square.top 1
+push this 5
+call Circle.bottom 1
+eq
+if-goto IF_TRUE67
+goto IF_FALSE67
+label IF_TRUE67
+push this 0
+call Square.right 1
+push this 5
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 5
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE68
+goto IF_FALSE68
+label IF_TRUE68
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE68
+label IF_FALSE67
+push this 0
+call Square.right 1
+push this 5
+call Circle.left 1
+eq
+if-goto IF_TRUE69
+goto IF_FALSE69
+label IF_TRUE69
+push this 0
+call Square.bottom 1
+push this 5
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 5
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE70
+goto IF_FALSE70
+label IF_TRUE70
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE70
+label IF_FALSE69
+push this 0
+call Square.left 1
+push this 5
+call Circle.right 1
+eq
+if-goto IF_TRUE71
+goto IF_FALSE71
+label IF_TRUE71
+push this 0
+call Square.bottom 1
+push this 5
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 5
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE72
+goto IF_FALSE72
+label IF_TRUE72
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE72
+label IF_FALSE71
+push this 0
+call Square.bottom 1
+push this 6
+call Circle.top 1
+eq
+if-goto IF_TRUE73
+goto IF_FALSE73
+label IF_TRUE73
+push this 0
+call Square.right 1
+push this 6
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 6
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE74
+goto IF_FALSE74
+label IF_TRUE74
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE74
+label IF_FALSE73
+push this 0
+call Square.top 1
+push this 6
+call Circle.bottom 1
+eq
+if-goto IF_TRUE75
+goto IF_FALSE75
+label IF_TRUE75
+push this 0
+call Square.right 1
+push this 6
+call Circle.left 1
+gt
+push this 0
+call Square.left 1
+push this 6
+call Circle.right 1
+lt
+and
+if-goto IF_TRUE76
+goto IF_FALSE76
+label IF_TRUE76
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE76
+label IF_FALSE75
+push this 0
+call Square.right 1
+push this 6
+call Circle.left 1
+eq
+if-goto IF_TRUE77
+goto IF_FALSE77
+label IF_TRUE77
+push this 0
+call Square.bottom 1
+push this 6
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 6
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE78
+goto IF_FALSE78
+label IF_TRUE78
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE78
+label IF_FALSE77
+push this 0
+call Square.left 1
+push this 6
+call Circle.right 1
+eq
+if-goto IF_TRUE79
+goto IF_FALSE79
+label IF_TRUE79
+push this 0
+call Square.bottom 1
+push this 6
+call Circle.top 1
+gt
+push this 0
+call Square.top 1
+push this 6
+call Circle.bottom 1
+lt
+and
+if-goto IF_TRUE80
+goto IF_FALSE80
+label IF_TRUE80
+call Screen.clearScreen 0
+pop temp 0
+push constant 14
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE80
+label IF_FALSE79
+push this 0
+call Square.bottom 1
+push this 1
+call Square.top 1
+eq
+if-goto IF_TRUE81
+goto IF_FALSE81
+label IF_TRUE81
+push this 0
+call Square.right 1
+push this 1
+call Square.left 1
+gt
+push this 0
+call Square.left 1
+push this 1
+call Square.right 1
+lt
+and
+if-goto IF_TRUE82
+goto IF_FALSE82
+label IF_TRUE82
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE82
+label IF_FALSE81
+push this 0
+call Square.top 1
+push this 1
+call Square.bottom 1
+eq
+if-goto IF_TRUE83
+goto IF_FALSE83
+label IF_TRUE83
+push this 0
+call Square.right 1
+push this 1
+call Square.left 1
+gt
+push this 0
+call Square.left 1
+push this 1
+call Square.right 1
+lt
+and
+if-goto IF_TRUE84
+goto IF_FALSE84
+label IF_TRUE84
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE84
+label IF_FALSE83
+push this 0
+call Square.right 1
+push this 1
+call Square.left 1
+eq
+if-goto IF_TRUE85
+goto IF_FALSE85
+label IF_TRUE85
+push this 0
+call Square.bottom 1
+push this 1
+call Square.top 1
+gt
+push this 0
+call Square.top 1
+push this 1
+call Square.bottom 1
+lt
+and
+if-goto IF_TRUE86
+goto IF_FALSE86
+label IF_TRUE86
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE86
+label IF_FALSE85
+push this 0
+call Square.left 1
+push this 1
+call Square.right 1
+eq
+if-goto IF_TRUE87
+goto IF_FALSE87
+label IF_TRUE87
+push this 0
+call Square.bottom 1
+push this 1
+call Square.top 1
+gt
+push this 0
+call Square.top 1
+push this 1
+call Square.bottom 1
+lt
+and
+if-goto IF_TRUE88
+goto IF_FALSE88
+label IF_TRUE88
+call Screen.clearScreen 0
+pop temp 0
+push constant 8
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Sys.halt 0
+pop temp 0
+label IF_FALSE88
+label IF_FALSE87
+goto WHILE_EXP2
+label WHILE_END2
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function MazeGame.moveSquare 0
+push argument 0
+pop pointer 0
+push this 7
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push static 0
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+call Square.moveUp 1
+pop temp 0
+push this 0
+call Square.bottom 1
+push constant 35
+lt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+pop static 0
+push constant 0
+not
+pop static 1
+label IF_FALSE2
+label IF_FALSE1
+push static 1
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 0
+call Square.top 1
+push constant 6
+gt
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE4
+label IF_FALSE3
+push static 2
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 0
+call Square.top 1
+push constant 6
+gt
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE6
+label IF_FALSE5
+push static 3
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 0
+call Square.moveUp 1
+pop temp 0
+push this 0
+call Square.bottom 1
+push constant 35
+lt
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+pop static 3
+push constant 0
+not
+pop static 2
+label IF_FALSE8
+label IF_FALSE7
+push static 4
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 0
+call Square.top 1
+push constant 214
+gt
+push this 0
+call Square.right 1
+push constant 175
+lt
+and
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE10
+push this 0
+call Square.top 1
+push constant 214
+gt
+push this 0
+call Square.right 1
+push constant 175
+gt
+and
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE11
+push this 0
+call Square.top 1
+push constant 214
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push constant 0
+pop static 10
+push constant 0
+not
+pop static 9
+label IF_FALSE12
+label IF_FALSE9
+push static 5
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push this 0
+call Square.top 1
+push constant 214
+gt
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE14
+push this 0
+call Square.top 1
+push constant 214
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push constant 0
+pop static 5
+push constant 0
+not
+pop static 6
+label IF_FALSE15
+label IF_FALSE13
+push static 6
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push this 0
+call Square.moveUp 1
+pop temp 0
+push this 0
+call Square.bottom 1
+push constant 40
+lt
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push constant 0
+pop static 6
+push constant 0
+not
+pop static 7
+label IF_FALSE17
+label IF_FALSE16
+push static 7
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+push this 0
+call Square.top 1
+push constant 6
+gt
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE19
+label IF_FALSE18
+push static 8
+if-goto IF_TRUE20
+goto IF_FALSE20
+label IF_TRUE20
+push this 0
+call Square.top 1
+push constant 6
+gt
+if-goto IF_TRUE21
+goto IF_FALSE21
+label IF_TRUE21
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE21
+label IF_FALSE20
+push static 9
+if-goto IF_TRUE22
+goto IF_FALSE22
+label IF_TRUE22
+push this 0
+call Square.moveUp 1
+pop temp 0
+push this 0
+call Square.bottom 1
+push constant 40
+lt
+if-goto IF_TRUE23
+goto IF_FALSE23
+label IF_TRUE23
+push constant 0
+pop static 9
+push constant 0
+not
+pop static 8
+label IF_FALSE23
+label IF_FALSE22
+push static 10
+if-goto IF_TRUE24
+goto IF_FALSE24
+label IF_TRUE24
+push this 0
+call Square.top 1
+push constant 214
+gt
+push this 0
+call Square.right 1
+push constant 447
+lt
+and
+if-goto IF_TRUE25
+goto IF_FALSE25
+label IF_TRUE25
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE25
+push this 0
+call Square.top 1
+push constant 214
+gt
+push this 0
+call Square.right 1
+push constant 447
+gt
+and
+if-goto IF_TRUE26
+goto IF_FALSE26
+label IF_TRUE26
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE26
+push this 0
+call Square.top 1
+push constant 214
+eq
+if-goto IF_TRUE27
+goto IF_FALSE27
+label IF_TRUE27
+push constant 0
+pop static 10
+push constant 0
+not
+pop static 9
+label IF_FALSE27
+label IF_FALSE24
+push static 11
+if-goto IF_TRUE28
+goto IF_FALSE28
+label IF_TRUE28
+push this 0
+call Square.top 1
+push constant 214
+gt
+push this 0
+call Square.left 1
+push constant 447
+gt
+and
+if-goto IF_TRUE29
+goto IF_FALSE29
+label IF_TRUE29
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE29
+push this 0
+call Square.top 1
+push constant 214
+eq
+if-goto IF_TRUE30
+goto IF_FALSE30
+label IF_TRUE30
+push constant 0
+pop static 11
+push constant 0
+not
+pop static 12
+label IF_FALSE30
+label IF_FALSE28
+push static 12
+if-goto IF_TRUE31
+goto IF_FALSE31
+label IF_TRUE31
+push this 0
+call Square.top 1
+push constant 6
+gt
+if-goto IF_TRUE32
+goto IF_FALSE32
+label IF_TRUE32
+push this 0
+call Square.moveUp 1
+pop temp 0
+label IF_FALSE32
+label IF_FALSE31
+label IF_FALSE0
+push this 7
+push constant 2
+eq
+if-goto IF_TRUE33
+goto IF_FALSE33
+label IF_TRUE33
+push static 0
+if-goto IF_TRUE34
+goto IF_FALSE34
+label IF_TRUE34
+push this 0
+call Square.bottom 1
+push constant 248
+lt
+if-goto IF_TRUE35
+goto IF_FALSE35
+label IF_TRUE35
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE35
+label IF_FALSE34
+push static 1
+if-goto IF_TRUE36
+goto IF_FALSE36
+label IF_TRUE36
+push this 0
+call Square.top 1
+push constant 35
+lt
+push this 0
+call Square.right 1
+push constant 40
+lt
+and
+if-goto IF_TRUE37
+goto IF_FALSE37
+label IF_TRUE37
+push this 0
+call Square.moveDown 1
+pop temp 0
+push this 0
+call Square.top 1
+push constant 35
+eq
+if-goto IF_TRUE38
+goto IF_FALSE38
+label IF_TRUE38
+push constant 0
+pop static 1
+push constant 0
+not
+pop static 0
+label IF_FALSE38
+label IF_FALSE37
+push this 0
+call Square.bottom 1
+push constant 35
+lt
+push this 0
+call Square.right 1
+push constant 40
+gt
+and
+if-goto IF_TRUE39
+goto IF_FALSE39
+label IF_TRUE39
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE39
+label IF_FALSE36
+push static 2
+if-goto IF_TRUE40
+goto IF_FALSE40
+label IF_TRUE40
+push this 0
+call Square.bottom 1
+push constant 35
+lt
+if-goto IF_TRUE41
+goto IF_FALSE41
+label IF_TRUE41
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE41
+push this 0
+call Square.bottom 1
+push constant 35
+eq
+if-goto IF_TRUE42
+goto IF_FALSE42
+label IF_TRUE42
+push constant 0
+pop static 2
+push constant 0
+not
+pop static 3
+label IF_FALSE42
+label IF_FALSE40
+push static 3
+if-goto IF_TRUE43
+goto IF_FALSE43
+label IF_TRUE43
+push this 0
+call Square.top 1
+push constant 215
+lt
+if-goto IF_TRUE44
+goto IF_FALSE44
+label IF_TRUE44
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE44
+push this 0
+call Square.top 1
+push constant 215
+eq
+if-goto IF_TRUE45
+goto IF_FALSE45
+label IF_TRUE45
+push constant 0
+pop static 3
+push constant 0
+not
+pop static 4
+label IF_FALSE45
+label IF_FALSE43
+push static 4
+if-goto IF_TRUE46
+goto IF_FALSE46
+label IF_TRUE46
+push this 0
+call Square.bottom 1
+push constant 248
+lt
+if-goto IF_TRUE47
+goto IF_FALSE47
+label IF_TRUE47
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE47
+label IF_FALSE46
+push static 5
+if-goto IF_TRUE48
+goto IF_FALSE48
+label IF_TRUE48
+push this 0
+call Square.bottom 1
+push constant 248
+lt
+if-goto IF_TRUE49
+goto IF_FALSE49
+label IF_TRUE49
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE49
+label IF_FALSE48
+push static 6
+if-goto IF_TRUE50
+goto IF_FALSE50
+label IF_TRUE50
+push this 0
+call Square.top 1
+push constant 215
+lt
+if-goto IF_TRUE51
+goto IF_FALSE51
+label IF_TRUE51
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE51
+push this 0
+call Square.top 1
+push constant 215
+eq
+if-goto IF_TRUE52
+goto IF_FALSE52
+label IF_TRUE52
+push constant 0
+pop static 6
+push constant 0
+not
+pop static 5
+label IF_FALSE52
+label IF_FALSE50
+push static 7
+if-goto IF_TRUE53
+goto IF_FALSE53
+label IF_TRUE53
+push this 0
+call Square.bottom 1
+push constant 40
+lt
+if-goto IF_TRUE54
+goto IF_FALSE54
+label IF_TRUE54
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE54
+push this 0
+call Square.bottom 1
+push constant 40
+eq
+if-goto IF_TRUE55
+goto IF_FALSE55
+label IF_TRUE55
+push constant 0
+pop static 7
+push constant 0
+not
+pop static 6
+label IF_FALSE55
+label IF_FALSE53
+push static 8
+if-goto IF_TRUE56
+goto IF_FALSE56
+label IF_TRUE56
+push this 0
+call Square.bottom 1
+push constant 40
+lt
+if-goto IF_TRUE57
+goto IF_FALSE57
+label IF_TRUE57
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE57
+push this 0
+call Square.bottom 1
+push constant 40
+eq
+if-goto IF_TRUE58
+goto IF_FALSE58
+label IF_TRUE58
+push constant 0
+pop static 8
+push constant 0
+not
+pop static 9
+label IF_FALSE58
+label IF_FALSE56
+push static 9
+if-goto IF_TRUE59
+goto IF_FALSE59
+label IF_TRUE59
+push this 0
+call Square.top 1
+push constant 215
+lt
+if-goto IF_TRUE60
+goto IF_FALSE60
+label IF_TRUE60
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE60
+push this 0
+call Square.top 1
+push constant 215
+eq
+if-goto IF_TRUE61
+goto IF_FALSE61
+label IF_TRUE61
+push constant 0
+pop static 9
+push constant 0
+not
+pop static 10
+label IF_FALSE61
+label IF_FALSE59
+push static 10
+if-goto IF_TRUE62
+goto IF_FALSE62
+label IF_TRUE62
+push this 0
+call Square.bottom 1
+push constant 248
+lt
+if-goto IF_TRUE63
+goto IF_FALSE63
+label IF_TRUE63
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE63
+label IF_FALSE62
+push static 11
+if-goto IF_TRUE64
+goto IF_FALSE64
+label IF_TRUE64
+push this 0
+call Square.bottom 1
+push constant 248
+lt
+if-goto IF_TRUE65
+goto IF_FALSE65
+label IF_TRUE65
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE65
+label IF_FALSE64
+push static 12
+if-goto IF_TRUE66
+goto IF_FALSE66
+label IF_TRUE66
+push this 0
+call Square.top 1
+push constant 215
+lt
+if-goto IF_TRUE67
+goto IF_FALSE67
+label IF_TRUE67
+push this 0
+call Square.moveDown 1
+pop temp 0
+label IF_FALSE67
+push this 0
+call Square.top 1
+push constant 215
+eq
+if-goto IF_TRUE68
+goto IF_FALSE68
+label IF_TRUE68
+push constant 0
+pop static 9
+push constant 0
+not
+pop static 10
+label IF_FALSE68
+label IF_FALSE66
+label IF_FALSE33
+push this 7
+push constant 3
+eq
+if-goto IF_TRUE69
+goto IF_FALSE69
+label IF_TRUE69
+push static 0
+if-goto IF_TRUE70
+goto IF_FALSE70
+label IF_TRUE70
+push this 0
+call Square.left 1
+push constant 6
+gt
+if-goto IF_TRUE71
+goto IF_FALSE71
+label IF_TRUE71
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE71
+label IF_FALSE70
+push static 1
+if-goto IF_TRUE72
+goto IF_FALSE72
+label IF_TRUE72
+push this 0
+call Square.left 1
+push constant 6
+gt
+if-goto IF_TRUE73
+goto IF_FALSE73
+label IF_TRUE73
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE73
+label IF_FALSE72
+push static 2
+if-goto IF_TRUE74
+goto IF_FALSE74
+label IF_TRUE74
+push this 0
+call Square.left 1
+push constant 40
+gt
+if-goto IF_TRUE75
+goto IF_FALSE75
+label IF_TRUE75
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE75
+push this 0
+call Square.left 1
+push constant 40
+eq
+if-goto IF_TRUE76
+goto IF_FALSE76
+label IF_TRUE76
+push constant 0
+pop static 2
+push constant 0
+not
+pop static 1
+label IF_FALSE76
+label IF_FALSE74
+push static 3
+if-goto IF_TRUE77
+goto IF_FALSE77
+label IF_TRUE77
+push this 0
+call Square.left 1
+push constant 41
+gt
+if-goto IF_TRUE78
+goto IF_FALSE78
+label IF_TRUE78
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE78
+label IF_FALSE77
+push static 4
+if-goto IF_TRUE79
+goto IF_FALSE79
+label IF_TRUE79
+push this 0
+call Square.left 1
+push constant 41
+gt
+if-goto IF_TRUE80
+goto IF_FALSE80
+label IF_TRUE80
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE80
+label IF_FALSE79
+push static 5
+if-goto IF_TRUE81
+goto IF_FALSE81
+label IF_TRUE81
+push this 0
+call Square.left 1
+push constant 175
+gt
+if-goto IF_TRUE82
+goto IF_FALSE82
+label IF_TRUE82
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE82
+push this 0
+call Square.left 1
+push constant 175
+eq
+if-goto IF_TRUE83
+goto IF_FALSE83
+label IF_TRUE83
+push constant 0
+pop static 5
+push constant 0
+not
+pop static 4
+label IF_FALSE83
+label IF_FALSE81
+push static 6
+if-goto IF_TRUE84
+goto IF_FALSE84
+label IF_TRUE84
+push this 0
+call Square.left 1
+push constant 176
+gt
+if-goto IF_TRUE85
+goto IF_FALSE85
+label IF_TRUE85
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE85
+label IF_FALSE84
+push static 7
+if-goto IF_TRUE86
+goto IF_FALSE86
+label IF_TRUE86
+push this 0
+call Square.left 1
+push constant 176
+gt
+if-goto IF_TRUE87
+goto IF_FALSE87
+label IF_TRUE87
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE87
+label IF_FALSE86
+push static 8
+if-goto IF_TRUE88
+goto IF_FALSE88
+label IF_TRUE88
+push this 0
+call Square.left 1
+push constant 300
+gt
+if-goto IF_TRUE89
+goto IF_FALSE89
+label IF_TRUE89
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE89
+push this 0
+call Square.left 1
+push constant 300
+eq
+if-goto IF_TRUE90
+goto IF_FALSE90
+label IF_TRUE90
+push constant 0
+pop static 8
+push constant 0
+not
+pop static 7
+label IF_FALSE90
+label IF_FALSE88
+push static 9
+if-goto IF_TRUE91
+goto IF_FALSE91
+label IF_TRUE91
+push this 0
+call Square.left 1
+push constant 301
+gt
+if-goto IF_TRUE92
+goto IF_FALSE92
+label IF_TRUE92
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE92
+label IF_FALSE91
+push static 10
+if-goto IF_TRUE93
+goto IF_FALSE93
+label IF_TRUE93
+push this 0
+call Square.left 1
+push constant 301
+gt
+if-goto IF_TRUE94
+goto IF_FALSE94
+label IF_TRUE94
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE94
+label IF_FALSE93
+push static 11
+if-goto IF_TRUE95
+goto IF_FALSE95
+label IF_TRUE95
+push this 0
+call Square.left 1
+push constant 447
+gt
+if-goto IF_TRUE96
+goto IF_FALSE96
+label IF_TRUE96
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE96
+push this 0
+call Square.left 1
+push constant 447
+eq
+if-goto IF_TRUE97
+goto IF_FALSE97
+label IF_TRUE97
+push constant 0
+pop static 11
+push constant 0
+not
+pop static 10
+label IF_FALSE97
+label IF_FALSE95
+push static 12
+if-goto IF_TRUE98
+goto IF_FALSE98
+label IF_TRUE98
+push this 0
+call Square.left 1
+push constant 448
+gt
+if-goto IF_TRUE99
+goto IF_FALSE99
+label IF_TRUE99
+push this 0
+call Square.moveLeft 1
+pop temp 0
+label IF_FALSE99
+label IF_FALSE98
+label IF_FALSE69
+push this 7
+push constant 4
+eq
+if-goto IF_TRUE100
+goto IF_FALSE100
+label IF_TRUE100
+push static 0
+if-goto IF_TRUE101
+goto IF_FALSE101
+label IF_TRUE101
+push this 0
+call Square.right 1
+push constant 39
+lt
+if-goto IF_TRUE102
+goto IF_FALSE102
+label IF_TRUE102
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE102
+label IF_FALSE101
+push static 1
+if-goto IF_TRUE103
+goto IF_FALSE103
+label IF_TRUE103
+push this 0
+call Square.left 1
+push constant 40
+lt
+push this 0
+call Square.left 1
+push constant 40
+eq
+or
+if-goto IF_TRUE104
+goto IF_FALSE104
+label IF_TRUE104
+push this 0
+call Square.moveRight 1
+pop temp 0
+push this 0
+call Square.left 1
+push constant 40
+gt
+if-goto IF_TRUE105
+goto IF_FALSE105
+label IF_TRUE105
+push constant 0
+pop static 1
+push constant 0
+not
+pop static 2
+label IF_FALSE105
+label IF_FALSE104
+label IF_FALSE103
+push static 2
+if-goto IF_TRUE106
+goto IF_FALSE106
+label IF_TRUE106
+push this 0
+call Square.right 1
+push constant 174
+lt
+if-goto IF_TRUE107
+goto IF_FALSE107
+label IF_TRUE107
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE107
+label IF_FALSE106
+push static 3
+if-goto IF_TRUE108
+goto IF_FALSE108
+label IF_TRUE108
+push this 0
+call Square.right 1
+push constant 174
+lt
+if-goto IF_TRUE109
+goto IF_FALSE109
+label IF_TRUE109
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE109
+label IF_FALSE108
+push static 4
+if-goto IF_TRUE110
+goto IF_FALSE110
+label IF_TRUE110
+push this 0
+call Square.left 1
+push constant 175
+lt
+push this 0
+call Square.left 1
+push constant 175
+eq
+or
+if-goto IF_TRUE111
+goto IF_FALSE111
+label IF_TRUE111
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE111
+push this 0
+call Square.left 1
+push constant 175
+gt
+if-goto IF_TRUE112
+goto IF_FALSE112
+label IF_TRUE112
+push constant 0
+pop static 4
+push constant 0
+not
+pop static 5
+label IF_FALSE112
+label IF_FALSE110
+push static 5
+if-goto IF_TRUE113
+goto IF_FALSE113
+label IF_TRUE113
+push this 0
+call Square.right 1
+push constant 299
+lt
+if-goto IF_TRUE114
+goto IF_FALSE114
+label IF_TRUE114
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE114
+label IF_FALSE113
+push static 6
+if-goto IF_TRUE115
+goto IF_FALSE115
+label IF_TRUE115
+push this 0
+call Square.right 1
+push constant 299
+lt
+if-goto IF_TRUE116
+goto IF_FALSE116
+label IF_TRUE116
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE116
+label IF_FALSE115
+push static 7
+if-goto IF_TRUE117
+goto IF_FALSE117
+label IF_TRUE117
+push this 0
+call Square.right 1
+push constant 300
+lt
+if-goto IF_TRUE118
+goto IF_FALSE118
+label IF_TRUE118
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE118
+push this 0
+call Square.right 1
+push constant 300
+eq
+if-goto IF_TRUE119
+goto IF_FALSE119
+label IF_TRUE119
+push constant 0
+pop static 7
+push constant 0
+not
+pop static 8
+label IF_FALSE119
+label IF_FALSE117
+push static 8
+if-goto IF_TRUE120
+goto IF_FALSE120
+label IF_TRUE120
+push this 0
+call Square.right 1
+push constant 446
+lt
+if-goto IF_TRUE121
+goto IF_FALSE121
+label IF_TRUE121
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE121
+label IF_FALSE120
+push static 9
+if-goto IF_TRUE122
+goto IF_FALSE122
+label IF_TRUE122
+push this 0
+call Square.right 1
+push constant 446
+lt
+if-goto IF_TRUE123
+goto IF_FALSE123
+label IF_TRUE123
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE123
+label IF_FALSE122
+push static 10
+if-goto IF_TRUE124
+goto IF_FALSE124
+label IF_TRUE124
+push this 0
+call Square.right 1
+push constant 447
+lt
+if-goto IF_TRUE125
+goto IF_FALSE125
+label IF_TRUE125
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE125
+push this 0
+call Square.right 1
+push constant 447
+eq
+if-goto IF_TRUE126
+goto IF_FALSE126
+label IF_TRUE126
+push constant 0
+pop static 10
+push constant 0
+not
+pop static 11
+label IF_FALSE126
+label IF_FALSE124
+push static 11
+if-goto IF_TRUE127
+goto IF_FALSE127
+label IF_TRUE127
+push this 0
+call Square.right 1
+push constant 504
+lt
+if-goto IF_TRUE128
+goto IF_FALSE128
+label IF_TRUE128
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE128
+label IF_FALSE127
+push static 12
+if-goto IF_TRUE129
+goto IF_FALSE129
+label IF_TRUE129
+push this 0
+call Square.right 1
+push constant 504
+lt
+if-goto IF_TRUE130
+goto IF_FALSE130
+label IF_TRUE130
+push this 0
+call Square.moveRight 1
+pop temp 0
+label IF_FALSE130
+label IF_FALSE129
+label IF_FALSE100
+push this 7
+push constant 5
+eq
+if-goto IF_TRUE131
+goto IF_FALSE131
+label IF_TRUE131
+push this 0
+call Square.stop 1
+pop temp 0
+label IF_FALSE131
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+return
+function MazeGame.moveCircle 0
+push argument 0
+pop pointer 0
+push static 13
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 3
+call Circle.left 1
+push constant 40
+gt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 3
+call Circle.moveLeft 1
+pop temp 0
+push this 3
+call Circle.left 1
+push constant 41
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+pop static 13
+push constant 0
+not
+pop static 14
+label IF_FALSE2
+label IF_FALSE1
+label IF_FALSE0
+push static 14
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 3
+call Circle.right 1
+push constant 174
+lt
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 3
+call Circle.moveRight 1
+pop temp 0
+push this 3
+call Circle.right 1
+push constant 173
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+pop static 13
+push constant 0
+pop static 14
+label IF_FALSE5
+label IF_FALSE4
+label IF_FALSE3
+push static 15
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 5
+call Circle.left 1
+push constant 300
+gt
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 5
+call Circle.moveLeft 1
+pop temp 0
+push this 5
+call Circle.left 1
+push constant 301
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+pop static 15
+push constant 0
+not
+pop static 16
+label IF_FALSE8
+label IF_FALSE7
+label IF_FALSE6
+push static 16
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 5
+call Circle.right 1
+push constant 447
+lt
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push this 5
+call Circle.moveRight 1
+pop temp 0
+push this 5
+call Circle.right 1
+push constant 446
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push constant 0
+not
+pop static 15
+push constant 0
+pop static 16
+label IF_FALSE11
+label IF_FALSE10
+label IF_FALSE9
+push static 17
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push this 6
+call Circle.left 1
+push constant 300
+gt
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push this 6
+call Circle.moveLeft 1
+pop temp 0
+push this 6
+call Circle.left 1
+push constant 301
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push constant 0
+pop static 17
+push constant 0
+not
+pop static 18
+label IF_FALSE14
+label IF_FALSE13
+label IF_FALSE12
+push static 18
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push this 6
+call Circle.right 1
+push constant 447
+lt
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push this 6
+call Circle.moveRight 1
+pop temp 0
+push this 6
+call Circle.right 1
+push constant 446
+eq
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push constant 0
+not
+pop static 17
+push constant 0
+pop static 18
+label IF_FALSE17
+label IF_FALSE16
+label IF_FALSE15
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+return

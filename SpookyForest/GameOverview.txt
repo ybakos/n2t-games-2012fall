@@ -1,0 +1,76 @@
+Spooky Forest 2.0
+by Matt Buland and Drew Koelling
+
+Game Summary: 
+	A 2-D adventure-game that takes the user through an open-world
+	battle against ogres, gremlins, and a perilously Spooky Forest.
+
+Detailed description:
+	The spooky forest in question will be a top-down map, only showing a couple
+	'areas', similar to the style seen in The Legend of Zelda games. Armaments
+	will be limited, with just a sword and a shield. Damage and Armor upgrades
+	will be hidden throughout the map. Enemies will be few, but fearsome,
+	ranging in health, and attack. There will be Ogres, Gremlins, and Zerglings;
+	in decreasing health and attack, but increasing in numbers.
+
+Scenarios:
+	1.	Bob is bored. He wants to go on an adventure! He boots up his
+		VM-Emulator, and loads up SpookyForest-2.0. Starting off in a new world
+		is always a precarious position: Bob has no sword and no shield, and
+		monsters could be lurking around an corner. The sense of thrill is
+		immense, as Bob makes his way into the unknown. Let the game begin.
+	2.	Bristole has been challenged by Xena to a duel; The first to reach 50
+		kills will win. Each start off with nothing, on entirely different,
+		entirely random maps. The battle will be fierce, the tensions high. Who
+		will win?
+
+Target Market:
+	Any person who loved the Zelda games will be a fan of this adventure. Though
+	a much smaller game than Zelda, the core gameplay elements will be similar.
+	Since the game will have 1-bit color, any gamer who is a fan of classic,
+	retro games will be interested in Spooky Forest-2.0
+
+What this game is not:
+	1.	A fully immersive, story-driven game.
+	2.	A Zelda remake
+	3.	A horror game
+
+What this game is:
+	1.	A fun adventure game with light swordplay
+	2.	Set in a spooky, if not strange environment
+	3.	Filled with light environment-sourced trolling
+	
+Game Screen Progression:
+	1. Title Screen
+	2. Rules/How to Play
+	3. Top Down view of Board, Player can begin interacting with game at this point. Will be called game screen
+	4. Game over when loss occurs, displays score
+	
+Title Screen:
+	Screen will display title of game and wait until some form of input or confirmation is given before moving to the next screen. 
+	Pixel art is TBD, but given the lack of any artistic talent from the group members, there will most likely be no pixel art.
+	
+Rules Screen:
+	Will display the rules of the game and how to play. Will wait for input before moving the player to the game screen
+	
+Game Screen:
+	Screen that actual game occurs in. The screen will be at a birds eye view. The screen will revel nearby areas, show monsters, player direction, 
+	as well as some other values on the side, such as whether you have a sword, amount of kill ect. The player will be able to move and interact
+	with things in this screen, using the keyboard as the input device. This screen will remain until the player loses.
+	at which case it will move to the game over screen.
+	Things to note:
+	1. Only directions are north, east, south, and west, no vertical play involved.
+	2. There is no global map, you can only observe your immediate area.
+	3. No pause screen, there is no pausing in the spooky forest. 
+	4. Different icons or simple geometric shapes will be used to differentiate between the player and monsters/objects.
+	5. The Screen is not always centered on the player. Player will always be in the screen.
+	6. There is no ultimate goal, so there is no 'win' stage. You keep playing until you lose or you rage quit. 
+	
+Game Over Screen:
+	Screen displayed when player loses. It will display the players score, such as kills, gold, swords accuired, and other tracked stats.
+	
+
+Other notes:
+	Spooky Forest was a text-based adventure game written in C++ as a Data
+	Structures project by Drew Koelling and Matt Buland. This game is an
+	enhanced, more visually appealing version of that.

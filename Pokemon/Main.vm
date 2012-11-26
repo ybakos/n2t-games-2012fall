@@ -1,0 +1,137 @@
+function Main.main 0
+call Main.printStart 0
+pop temp 0
+call Screen.clearScreen 0
+pop temp 0
+call Main.playGame 0
+pop temp 0
+push constant 0
+return
+function Main.printStart 1
+call Board.new 0
+pop local 0
+push local 0
+call Board.printWelcome 1
+pop temp 0
+push local 0
+call Board.getStart 1
+push constant 0
+not
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+call Screen.clearScreen 0
+pop temp 0
+label IF_FALSE0
+push local 0
+call Board.dispose 1
+pop temp 0
+push constant 0
+return
+function Main.playGame 2
+push constant 0
+pop local 1
+call Game.new 0
+pop local 0
+push local 0
+call Game.drawPikachu 1
+pop temp 0
+push local 0
+push local 0
+call Game.getAnswer 1
+push constant 7
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 75
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 67
+call String.appendChar 2
+push constant 72
+call String.appendChar 2
+push constant 85
+call String.appendChar 2
+call Game.checkAnswer 3
+pop local 1
+push local 1
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop local 1
+push local 0
+call Game.drawHaunter 1
+pop temp 0
+push local 0
+push local 0
+call Game.getAnswer 1
+push constant 7
+call String.new 1
+push constant 72
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 85
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+call Game.checkAnswer 3
+pop local 1
+push local 1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+pop local 1
+push local 0
+call Game.drawFlareon 1
+pop temp 0
+push local 0
+push local 0
+call Game.getAnswer 1
+push constant 7
+call String.new 1
+push constant 70
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+call Game.checkAnswer 3
+pop local 1
+call Screen.clearScreen 0
+pop temp 0
+push local 1
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 0
+call Game.Master 1
+pop temp 0
+label IF_FALSE2
+label IF_FALSE1
+label IF_FALSE0
+push local 0
+call Game.dispose 1
+pop temp 0
+push constant 0
+return

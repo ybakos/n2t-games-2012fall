@@ -1,0 +1,580 @@
+function Alien.new 0
+push constant 3
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+push pointer 0
+call Alien.draw 1
+pop temp 0
+push pointer 0
+return
+function Alien.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Alien.kill 0
+push argument 0
+pop pointer 0
+push constant 0
+pop this 2
+push pointer 0
+call Alien.downClear 1
+pop temp 0
+push constant 5000
+pop this 0
+push constant 0
+return
+function Alien.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Alien.setX 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push constant 0
+return
+function Alien.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Alien.setY 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 1
+push constant 0
+return
+function Alien.rightClear 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 1
+sub
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+sub
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 26
+add
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 27
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push this 1
+push this 0
+push this 1
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Alien.downClear 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 1
+sub
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+sub
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 26
+add
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 27
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push this 1
+push this 0
+push constant 25
+add
+push this 1
+push constant 12
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Alien.leftClear 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 1
+sub
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+sub
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 26
+add
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 27
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 25
+add
+push this 1
+push this 0
+push constant 25
+add
+push this 1
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Alien.moveRight 0
+push argument 0
+pop pointer 0
+push this 2
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Alien.rightClear 1
+pop temp 0
+push this 0
+push constant 1
+add
+pop this 0
+push pointer 0
+call Alien.draw 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Alien.moveLeft 0
+push argument 0
+pop pointer 0
+push this 2
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Alien.leftClear 1
+pop temp 0
+push this 0
+push constant 1
+sub
+pop this 0
+push pointer 0
+call Alien.draw 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Alien.moveDown 0
+push argument 0
+pop pointer 0
+push this 2
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Alien.downClear 1
+pop temp 0
+push this 1
+push constant 20
+add
+pop this 1
+push pointer 0
+call Alien.draw 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Alien.draw 0
+push argument 0
+pop pointer 0
+push this 2
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Alien.drawBody 1
+pop temp 0
+push pointer 0
+call Alien.drawLeftLeg 1
+pop temp 0
+push pointer 0
+call Alien.drawRightLeg 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Alien.drawBody 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push constant 25
+add
+push this 1
+push constant 12
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 4
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 4
+add
+push this 1
+push constant 4
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 21
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 21
+add
+push this 1
+push constant 4
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Alien.drawRightLeg 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 26
+add
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 27
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 28
+add
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+return
+function Alien.drawLeftLeg 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 1
+sub
+push this 1
+push constant 13
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+sub
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 17
+add
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+return

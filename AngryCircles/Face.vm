@@ -1,0 +1,356 @@
+function Face.new 0
+push constant 5
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+push argument 3
+pop this 3
+push pointer 0
+call Face.draw 1
+pop temp 0
+push pointer 0
+return
+function Face.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Face.draw 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 230
+gt
+push this 1
+push constant 25
+lt
+or
+push this 0
+push constant 501
+gt
+or
+push this 0
+push constant 10
+lt
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 2
+sub
+push this 1
+push this 2
+sub
+push this 0
+push this 2
+add
+push this 1
+push this 2
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 2
+sub
+push constant 1
+add
+push this 1
+push this 2
+sub
+push constant 1
+add
+push this 0
+push this 2
+add
+push constant 1
+sub
+push this 1
+push this 2
+add
+push constant 1
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 6
+sub
+push this 1
+push constant 4
+sub
+push this 0
+push constant 3
+sub
+push this 1
+push constant 1
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 4
+sub
+push this 0
+push constant 6
+add
+push this 1
+push constant 1
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push this 4
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+push constant 5
+sub
+push this 1
+push constant 5
+add
+push this 0
+push constant 5
+add
+push this 1
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+label IF_FALSE1
+push this 3
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 0
+push constant 4
+sub
+push this 1
+push constant 5
+add
+push this 0
+push constant 4
+add
+push this 1
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+sub
+push this 1
+push constant 4
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 4
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 5
+sub
+push this 1
+push constant 3
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 3
+add
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE2
+push this 3
+not
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 0
+push constant 4
+sub
+push this 1
+push constant 4
+add
+push this 0
+push constant 4
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+sub
+push this 1
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 1
+sub
+push this 1
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 1
+add
+push this 1
+push constant 5
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+sub
+push this 1
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+add
+push this 1
+push constant 6
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+sub
+push this 1
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 7
+sub
+call Screen.drawPixel 2
+pop temp 0
+label IF_FALSE3
+push constant 0
+return
+function Face.die 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+pop this 4
+push pointer 0
+call Face.draw 1
+pop temp 0
+push constant 0
+return
+function Face.erase 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 240
+gt
+push this 1
+push constant 25
+lt
+or
+push this 0
+push constant 502
+gt
+or
+push this 0
+push constant 10
+lt
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 2
+sub
+push this 1
+push this 2
+sub
+push this 0
+push this 2
+add
+push this 1
+push this 2
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Face.setPosition 0
+push argument 0
+pop pointer 0
+push argument 3
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Face.erase 1
+pop temp 0
+label IF_FALSE0
+push argument 1
+pop this 0
+push argument 2
+pop this 1
+push pointer 0
+call Face.draw 1
+pop temp 0
+push constant 0
+return

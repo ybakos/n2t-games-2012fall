@@ -1,0 +1,23 @@
+Notes for elements project:
+
+Functions:
+
+playGame:
+starts a new game of men's morris. Calls humanTurn to begin the game.  
+
+drawBoard:
+implement on Sunday
+
+placePieces:
+takes an input of the spot the piece should be placed on. Redraws the board with that piece on the spot choosen. 
+
+computerTurn:
+Calls placePieces with a randomly generated spot from the open spots that are left. 
+
+humanTurn:
+Calls placePieces with an input from the user. Validates the spot given as an open spot.
+
+checkForWin:
+checks the board for a winning condition. If one player has less than two pieces left they have lost and the other player has won. Also if one player cannot move, the other player wins. 
+
+

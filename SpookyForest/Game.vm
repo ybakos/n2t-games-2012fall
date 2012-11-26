@@ -1,0 +1,918 @@
+function Game.new 2
+push constant 8
+call Memory.alloc 1
+pop pointer 0
+push constant 8
+call Array.new 1
+pop this 3
+push constant 8
+call Array.new 1
+pop this 4
+push constant 8
+call Array.new 1
+pop this 5
+push constant 0
+pop local 0
+push constant 5
+pop this 0
+push constant 100
+push constant 100
+push pointer 0
+call Player.new 3
+pop this 1
+label WHILE_EXP0
+push local 0
+push constant 8
+lt
+not
+if-goto WHILE_END0
+push constant 503
+call Random.randRange 1
+pop local 1
+push local 1
+push constant 4
+add
+pop local 1
+push local 1
+call Math.abs 1
+pop local 1
+push local 0
+push this 3
+add
+push local 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 248
+call Random.randRange 1
+pop local 1
+push local 1
+push constant 3
+add
+pop local 1
+push local 1
+call Math.abs 1
+pop local 1
+push local 0
+push this 4
+add
+push local 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push this 5
+add
+push constant 0
+not
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push pointer 0
+push constant 200
+push constant 100
+push constant 0
+call Monster.new 4
+pop this 2
+push constant 21
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 98
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 112
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+pop static 0
+push pointer 0
+return
+function Game.start 1
+push argument 0
+pop pointer 0
+push this 1
+call Player.draw 1
+pop temp 0
+push this 2
+call Monster.draw 1
+pop temp 0
+push constant 0
+not
+pop local 0
+label WHILE_EXP0
+push local 0
+not
+if-goto WHILE_END0
+push pointer 0
+call Game.cycle 1
+pop temp 0
+push constant 50
+call Sys.wait 1
+pop temp 0
+push this 1
+call Player.hasHealth 1
+not
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop local 0
+label IF_FALSE0
+push this 2
+call Monster.hasHealth 1
+not
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+pop local 0
+label IF_FALSE1
+goto WHILE_EXP0
+label WHILE_END0
+push this 1
+call Player.hasHealth 1
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+call Game.displayWinScreen 1
+pop temp 0
+goto IF_END2
+label IF_FALSE2
+push pointer 0
+call Game.displayLoseScreen 1
+pop temp 0
+label IF_END2
+push constant 0
+return
+function Game.cycle 2
+push argument 0
+pop pointer 0
+call Keyboard.keyPressed 0
+pop local 0
+push pointer 0
+push local 0
+call Game.handleKeyPress 2
+pop temp 0
+push this 2
+call Monster.move 1
+pop temp 0
+push pointer 0
+call Game.drawShields 1
+pop temp 0
+push constant 0
+return
+function Game.handleKeyPress 0
+push argument 0
+pop pointer 0
+push this 1
+push argument 1
+call Player.handleKeyPress 2
+pop temp 0
+push constant 0
+return
+function Game.drawShields 1
+push argument 0
+pop pointer 0
+label WHILE_EXP0
+push local 0
+push constant 8
+lt
+not
+if-goto WHILE_END0
+push local 0
+push this 5
+add
+pop pointer 1
+push that 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+label IF_FALSE0
+push pointer 0
+push local 0
+push this 3
+add
+pop pointer 1
+push that 0
+push local 0
+push this 4
+add
+pop pointer 1
+push that 0
+call Game.drawShield 3
+pop temp 0
+push local 0
+push this 5
+add
+pop pointer 1
+push that 0
+push constant 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+label IF_FALSE1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Game.drawShield 0
+push argument 0
+pop pointer 0
+push argument 1
+push constant 2
+sub
+push argument 2
+push constant 2
+sub
+push argument 1
+push constant 2
+add
+push argument 2
+push constant 1
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push constant 1
+sub
+push argument 2
+push constant 2
+add
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 2
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push argument 2
+push constant 3
+sub
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+return
+function Game.monsterAttack 0
+push argument 0
+pop pointer 0
+push this 1
+call Player.getX 1
+push argument 1
+push argument 3
+add
+push constant 17
+add
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+call Player.getX 1
+push argument 1
+push argument 3
+sub
+push constant 17
+sub
+gt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 1
+call Player.getY 1
+push argument 2
+push argument 3
+add
+push constant 13
+add
+lt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 1
+call Player.getY 1
+push argument 2
+push argument 3
+sub
+push constant 13
+sub
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 1
+push argument 4
+call Player.getHit 2
+pop temp 0
+label IF_FALSE3
+label IF_FALSE2
+label IF_FALSE1
+label IF_FALSE0
+push constant 0
+return
+function Game.playerAttack 0
+push argument 0
+pop pointer 0
+push this 2
+call Monster.getX 1
+push argument 1
+push argument 3
+add
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 2
+call Monster.getX 1
+push argument 1
+push argument 3
+sub
+gt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 2
+call Monster.getY 1
+push argument 2
+push argument 3
+add
+push this 2
+call Monster.getRightBuffer 1
+add
+lt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 2
+call Monster.getY 1
+push argument 2
+push argument 3
+sub
+push this 2
+call Monster.getLeftBuffer 1
+sub
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 2
+push argument 4
+call Monster.getHit 2
+pop temp 0
+label IF_FALSE3
+label IF_FALSE2
+label IF_FALSE1
+label IF_FALSE0
+push constant 0
+return
+function Game.playerPickupShield 4
+push argument 0
+pop pointer 0
+push constant 0
+pop local 3
+push constant 0
+pop local 0
+push constant 0
+pop local 1
+push constant 0
+pop local 2
+label WHILE_EXP0
+push local 3
+push constant 8
+lt
+not
+if-goto WHILE_END0
+push local 3
+push this 5
+add
+pop pointer 1
+push that 0
+push constant 0
+not
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 1
+push local 3
+push this 3
+add
+pop pointer 1
+push that 0
+sub
+call Math.abs 1
+push constant 3
+lt
+pop local 0
+push argument 2
+push local 3
+push this 4
+add
+pop pointer 1
+push that 0
+sub
+call Math.abs 1
+push constant 3
+lt
+pop local 1
+push local 0
+push local 1
+and
+pop local 2
+push local 2
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 1
+call Player.acquireShield 1
+pop temp 0
+push local 3
+push this 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_FALSE1
+label IF_FALSE0
+push local 3
+push constant 1
+add
+pop local 3
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Game.displayWinScreen 1
+push argument 0
+pop pointer 0
+push pointer 0
+call Game.clearDispKeepPlayers 1
+pop temp 0
+push constant 0
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push constant 29
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 98
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 16
+call String.new 1
+push constant 67
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 11
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 63
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 0
+not
+pop local 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+label WHILE_EXP0
+call Keyboard.keyPressed 0
+push constant 66
+eq
+not
+not
+if-goto WHILE_END0
+push local 0
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push constant 55
+push constant 500
+push constant 66
+call Screen.drawRectangle 4
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push constant 5
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push static 0
+call Output.printString 1
+pop temp 0
+label IF_END0
+push local 0
+not
+pop local 0
+push constant 200
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+return
+function Game.displayLoseScreen 1
+push argument 0
+pop pointer 0
+push pointer 0
+call Game.clearDispKeepPlayers 1
+pop temp 0
+push constant 0
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push constant 51
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 98
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 102
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 100
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 98
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 104
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 102
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 9
+call String.new 1
+push constant 89
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 107
+call String.appendChar 2
+push constant 46
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 11
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 103
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 63
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push constant 0
+not
+pop local 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+label WHILE_EXP0
+call Keyboard.keyPressed 0
+push constant 66
+eq
+not
+not
+if-goto WHILE_END0
+push local 0
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push constant 55
+push constant 500
+push constant 66
+call Screen.drawRectangle 4
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push constant 5
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push static 0
+call Output.printString 1
+pop temp 0
+label IF_END0
+push local 0
+not
+pop local 0
+push constant 200
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+return
+function Game.clearDispKeepPlayers 0
+push argument 0
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push this 1
+call Player.draw 1
+pop temp 0
+push this 2
+call Monster.draw 1
+pop temp 0
+push constant 0
+return

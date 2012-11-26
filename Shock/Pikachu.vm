@@ -1,0 +1,536 @@
+function Pikachu.new 0
+push constant 5
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push constant 20
+pop this 2
+push constant 60
+pop this 4
+push constant 0
+not
+pop this 3
+push pointer 0
+call Pikachu.drawSprite 1
+pop temp 0
+push pointer 0
+return
+function Pikachu.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Pikachu.drawSprite 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Pikachu.drawWalk 1
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 12
+add
+push this 1
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 8
+add
+push this 1
+push constant 3
+add
+push this 0
+push constant 16
+add
+push this 1
+push constant 3
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 4
+add
+push this 0
+push constant 7
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 10
+add
+push this 1
+push constant 4
+add
+push this 0
+push constant 12
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 16
+add
+push this 1
+push constant 4
+add
+push this 0
+push constant 13
+add
+push this 1
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 5
+add
+push this 0
+push constant 11
+add
+push this 1
+push constant 6
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 10
+add
+push this 1
+push constant 6
+add
+push this 0
+push constant 10
+add
+push this 1
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 4
+add
+push this 1
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 6
+add
+push this 0
+push constant 3
+add
+push this 1
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 8
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 9
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+add
+push this 1
+push constant 8
+add
+push this 0
+push constant 2
+add
+push this 1
+push constant 9
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 8
+add
+push this 0
+push constant 11
+add
+push this 1
+push constant 9
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 12
+add
+push this 1
+push constant 9
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 13
+add
+push this 1
+push constant 8
+add
+push this 0
+push constant 15
+add
+push this 1
+push constant 8
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 15
+add
+push this 1
+push constant 9
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 10
+add
+push this 0
+push constant 3
+add
+push this 1
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 12
+add
+push this 0
+push constant 6
+add
+push this 1
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 6
+add
+push this 1
+push constant 15
+add
+push this 0
+push constant 9
+add
+push this 1
+push constant 15
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 9
+add
+push this 1
+push constant 10
+add
+push this 0
+push constant 12
+add
+push this 1
+push constant 10
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 12
+add
+push this 1
+push constant 11
+add
+push this 0
+push constant 13
+add
+push this 1
+push constant 11
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 9
+add
+push this 1
+push constant 12
+add
+push this 0
+push constant 12
+add
+push this 1
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 14
+add
+push this 1
+push constant 10
+add
+push this 0
+push constant 15
+add
+push this 1
+push constant 11
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 14
+add
+push this 1
+push constant 12
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 13
+add
+push this 0
+push constant 13
+add
+push this 1
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Pikachu.drawWalk 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 3
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push constant 2
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 4
+add
+push this 1
+push constant 13
+add
+push this 0
+push constant 5
+add
+push this 1
+push constant 14
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 15
+add
+push this 0
+push constant 4
+add
+push this 1
+push constant 15
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 13
+add
+push this 1
+push constant 14
+add
+push this 0
+push constant 11
+add
+push this 1
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 9
+add
+push this 1
+push constant 15
+add
+push this 0
+push constant 10
+add
+push this 1
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+pop this 3
+goto IF_END0
+label IF_FALSE0
+push this 0
+push constant 5
+add
+push this 1
+push constant 11
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 9
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+not
+pop this 3
+label IF_END0
+push constant 0
+return
+function Pikachu.erase 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push this 2
+add
+push this 1
+push this 2
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Pikachu.reset 0
+push argument 0
+pop pointer 0
+push constant 460
+pop this 0
+push constant 0
+return
+function Pikachu.moveLeft 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 1
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Pikachu.erase 1
+pop temp 0
+push this 0
+push constant 20
+sub
+pop this 0
+push pointer 0
+call Pikachu.drawSprite 1
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push pointer 0
+call Pikachu.erase 1
+pop temp 0
+push pointer 0
+call Pikachu.reset 1
+pop temp 0
+label IF_END0
+push constant 0
+return
+function Pikachu.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Pikachu.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return

@@ -1,0 +1,768 @@
+function BackEnd.generateCode 2
+push constant 0
+pop static 2
+push constant 0
+pop static 7
+push constant 4
+call Array.new 1
+pop static 3
+push constant 4
+call Array.new 1
+pop static 4
+push constant 6
+call Array.new 1
+pop static 5
+push constant 6
+call Array.new 1
+pop static 6
+push constant 1
+call Random.setSeed 1
+pop temp 0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 6
+lt
+not
+if-goto WHILE_END0
+push local 0
+push static 6
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+pop local 0
+label WHILE_EXP1
+push local 0
+push constant 4
+lt
+not
+if-goto WHILE_END1
+push constant 5
+call Random.randRange 1
+pop local 1
+push local 1
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 0
+push static 3
+add
+push constant 82
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 0
+push static 6
+add
+push constant 0
+push static 6
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END0
+label IF_FALSE0
+push local 1
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 0
+push static 3
+add
+push constant 79
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push static 6
+add
+push constant 1
+push static 6
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END1
+label IF_FALSE1
+push local 1
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 0
+push static 3
+add
+push constant 89
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push static 6
+add
+push constant 2
+push static 6
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END2
+label IF_FALSE2
+push local 1
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 0
+push static 3
+add
+push constant 71
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push static 6
+add
+push constant 3
+push static 6
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END3
+label IF_FALSE3
+push local 1
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 0
+push static 3
+add
+push constant 66
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 4
+push static 6
+add
+push constant 4
+push static 6
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END4
+label IF_FALSE4
+push local 0
+push static 3
+add
+push constant 80
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 5
+push static 6
+add
+push constant 5
+push static 6
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_END4
+label IF_END3
+label IF_END2
+label IF_END1
+label IF_END0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push constant 0
+return
+function BackEnd.getNextGuess 2
+push static 2
+push constant 1
+add
+pop static 2
+push static 7
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+call Screens.youWin 0
+pop temp 0
+push constant 0
+return
+label IF_FALSE0
+push static 2
+push constant 13
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+push static 3
+add
+pop pointer 1
+push that 0
+push constant 1
+push static 3
+add
+pop pointer 1
+push that 0
+push constant 2
+push static 3
+add
+pop pointer 1
+push that 0
+push constant 3
+push static 3
+add
+pop pointer 1
+push that 0
+call Screens.youLoose 4
+pop temp 0
+push constant 0
+return
+label IF_FALSE1
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 6
+lt
+not
+if-goto WHILE_END0
+push local 0
+push static 5
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push static 2
+call Output.printInt 1
+pop temp 0
+push static 2
+push constant 9
+gt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 2
+call String.new 1
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+goto IF_END2
+label IF_FALSE2
+push constant 3
+call String.new 1
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label IF_END2
+push constant 0
+pop local 0
+label WHILE_EXP1
+push local 0
+push constant 4
+lt
+not
+if-goto WHILE_END1
+push constant 0
+pop local 1
+label WHILE_EXP2
+push local 1
+push constant 82
+eq
+push local 1
+push constant 79
+eq
+or
+push local 1
+push constant 89
+eq
+or
+push local 1
+push constant 71
+eq
+or
+push local 1
+push constant 66
+eq
+or
+push local 1
+push constant 80
+eq
+or
+not
+not
+if-goto WHILE_END2
+call Keyboard.readChar 0
+pop local 1
+push local 1
+push constant 82
+eq
+push local 1
+push constant 79
+eq
+or
+push local 1
+push constant 89
+eq
+or
+push local 1
+push constant 71
+eq
+or
+push local 1
+push constant 66
+eq
+or
+push local 1
+push constant 80
+eq
+or
+not
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+call Output.backSpace 0
+pop temp 0
+label IF_FALSE3
+goto WHILE_EXP2
+label WHILE_END2
+push local 1
+push constant 82
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+push static 5
+add
+push constant 0
+push static 5
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END4
+label IF_FALSE4
+push local 1
+push constant 79
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 1
+push static 5
+add
+push constant 1
+push static 5
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END5
+label IF_FALSE5
+push local 1
+push constant 89
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 2
+push static 5
+add
+push constant 2
+push static 5
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END6
+label IF_FALSE6
+push local 1
+push constant 71
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 3
+push static 5
+add
+push constant 3
+push static 5
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END7
+label IF_FALSE7
+push local 1
+push constant 66
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 4
+push static 5
+add
+push constant 4
+push static 5
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto IF_END8
+label IF_FALSE8
+push constant 5
+push static 5
+add
+push constant 5
+push static 5
+add
+pop pointer 1
+push that 0
+push constant 1
+add
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label IF_END8
+label IF_END7
+label IF_END6
+label IF_END5
+label IF_END4
+push local 0
+push static 4
+add
+push local 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 4
+call String.new 1
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push constant 0
+not
+return
+function BackEnd.compareGuess 1
+push constant 0
+pop static 0
+push constant 0
+pop static 1
+push constant 0
+push static 3
+add
+pop pointer 1
+push that 0
+push constant 0
+push static 4
+add
+pop pointer 1
+push that 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push static 0
+push constant 1
+add
+pop static 0
+label IF_FALSE0
+push constant 1
+push static 3
+add
+pop pointer 1
+push that 0
+push constant 1
+push static 4
+add
+pop pointer 1
+push that 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push static 0
+push constant 1
+add
+pop static 0
+label IF_FALSE1
+push constant 2
+push static 3
+add
+pop pointer 1
+push that 0
+push constant 2
+push static 4
+add
+pop pointer 1
+push that 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push static 0
+push constant 1
+add
+pop static 0
+label IF_FALSE2
+push constant 3
+push static 3
+add
+pop pointer 1
+push that 0
+push constant 3
+push static 4
+add
+pop pointer 1
+push that 0
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push static 0
+push constant 1
+add
+pop static 0
+label IF_FALSE3
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 6
+lt
+not
+if-goto WHILE_END0
+push local 0
+push static 5
+add
+pop pointer 1
+push that 0
+push constant 0
+eq
+not
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 0
+push static 6
+add
+pop pointer 1
+push that 0
+push local 0
+push static 5
+add
+pop pointer 1
+push that 0
+gt
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push static 1
+push local 0
+push static 5
+add
+pop pointer 1
+push that 0
+add
+pop static 1
+goto IF_END5
+label IF_FALSE5
+push static 1
+push local 0
+push static 6
+add
+pop pointer 1
+push that 0
+add
+pop static 1
+label IF_END5
+label IF_FALSE4
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push static 1
+push static 0
+sub
+pop static 1
+push constant 4
+call String.new 1
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 0
+pop local 0
+label WHILE_EXP1
+push local 0
+push static 0
+lt
+not
+if-goto WHILE_END1
+push constant 43
+call Output.printChar 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push constant 0
+pop local 0
+label WHILE_EXP2
+push local 0
+push static 1
+lt
+not
+if-goto WHILE_END2
+push constant 45
+call Output.printChar 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP2
+label WHILE_END2
+call Output.println 0
+pop temp 0
+push static 0
+push constant 4
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+not
+pop static 7
+label IF_FALSE6
+push constant 0
+return

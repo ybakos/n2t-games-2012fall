@@ -1,0 +1,431 @@
+function Tower.new 0
+push constant 5
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+push argument 3
+pop this 3
+push argument 4
+pop this 4
+push pointer 0
+return
+function Tower.shoot 1
+push argument 0
+pop pointer 0
+push constant 0
+push constant 0
+push constant 2
+push constant 2
+call Rectangle.new 4
+push constant 15
+push constant 0
+not
+push constant 0
+call Projectile.new 4
+pop local 0
+push local 0
+push this 1
+call Rectangle.x 1
+push this 1
+call Rectangle.y 1
+call Projectile.update 3
+pop temp 0
+push local 0
+return
+function Tower.factory 2
+push argument 0
+push constant 66
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push constant 0
+push constant 2
+push constant 2
+call Rectangle.new 4
+pop local 1
+push local 1
+push constant 15
+push constant 0
+not
+push constant 0
+call Projectile.new 4
+pop local 0
+push argument 1
+push argument 2
+push constant 8
+push constant 8
+call Rectangle.new 4
+pop local 1
+push argument 0
+push local 1
+push local 0
+push constant 15
+push constant 5
+call Tower.new 5
+return
+label IF_FALSE0
+push argument 0
+push constant 65
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+push constant 0
+push constant 2
+push constant 2
+call Rectangle.new 4
+pop local 1
+push local 1
+push constant 10
+push constant 0
+push constant 0
+call Projectile.new 4
+pop local 0
+push argument 1
+push argument 2
+push constant 8
+push constant 8
+call Rectangle.new 4
+pop local 1
+push argument 0
+push local 1
+push local 0
+push constant 15
+push constant 10
+call Tower.new 5
+return
+label IF_FALSE1
+push argument 0
+push constant 70
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+push constant 0
+push constant 2
+push constant 2
+call Rectangle.new 4
+pop local 1
+push local 1
+push constant 0
+push constant 0
+not
+push constant 0
+call Projectile.new 4
+pop local 0
+push argument 1
+push argument 2
+push constant 8
+push constant 8
+call Rectangle.new 4
+pop local 1
+push argument 0
+push local 1
+push local 0
+push constant 10
+push constant 10
+call Tower.new 5
+return
+label IF_FALSE2
+push argument 0
+push constant 80
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+push constant 0
+push constant 2
+push constant 2
+call Rectangle.new 4
+pop local 1
+push local 1
+push constant 20
+push constant 0
+push constant 0
+not
+call Projectile.new 4
+pop local 0
+push argument 1
+push argument 2
+push constant 8
+push constant 8
+call Rectangle.new 4
+pop local 1
+push argument 0
+push local 1
+push local 0
+push constant 10
+push constant 8
+call Tower.new 5
+return
+label IF_FALSE3
+push argument 0
+push constant 83
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+push constant 0
+push constant 2
+push constant 2
+call Rectangle.new 4
+pop local 1
+push local 1
+push constant 25
+push constant 0
+push constant 0
+call Projectile.new 4
+pop local 0
+push argument 1
+push argument 2
+push constant 8
+push constant 8
+call Rectangle.new 4
+pop local 1
+push argument 0
+push local 1
+push local 0
+push constant 20
+push constant 5
+call Tower.new 5
+return
+label IF_FALSE4
+push constant 0
+return
+function Tower.setLoc 0
+push argument 0
+pop pointer 0
+push this 1
+push argument 1
+push argument 2
+call Rectangle.setLoc 3
+pop temp 0
+push constant 0
+return
+function Tower.draw 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 65
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Tower.drawA 1
+pop temp 0
+label IF_FALSE0
+push this 0
+push constant 66
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+call Tower.drawB 1
+pop temp 0
+label IF_FALSE1
+push this 1
+call Rectangle.drawOutline 1
+pop temp 0
+push constant 0
+return
+function Tower.drawA 2
+push argument 0
+pop pointer 0
+push this 1
+call Rectangle.x 1
+push constant 1
+add
+pop local 0
+push this 1
+call Rectangle.y 1
+pop local 1
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push local 0
+push constant 3
+add
+push local 1
+push constant 1
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 0
+push constant 2
+add
+push local 1
+push constant 2
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 0
+push constant 4
+add
+push local 1
+push constant 2
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 0
+push constant 1
+add
+push local 1
+push constant 3
+add
+push local 0
+push constant 1
+add
+push local 1
+push constant 6
+add
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 5
+add
+push local 1
+push constant 3
+add
+push local 0
+push constant 5
+add
+push local 1
+push constant 6
+add
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 2
+add
+push local 1
+push constant 4
+add
+push local 0
+push constant 4
+add
+push local 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Tower.drawB 2
+push argument 0
+pop pointer 0
+push this 1
+call Rectangle.x 1
+push constant 1
+add
+pop local 0
+push this 1
+call Rectangle.y 1
+push constant 1
+add
+pop local 1
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push local 0
+push constant 4
+add
+push local 1
+push constant 2
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 0
+push constant 4
+add
+push local 1
+push constant 4
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 0
+push constant 1
+add
+push local 1
+push constant 1
+add
+push local 0
+push constant 1
+add
+push local 1
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 2
+add
+push local 1
+push constant 1
+add
+push local 0
+push constant 3
+add
+push local 1
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 2
+add
+push local 1
+push constant 5
+add
+push local 0
+push constant 3
+add
+push local 1
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 2
+add
+push local 1
+push constant 3
+add
+push local 0
+push constant 3
+add
+push local 1
+push constant 3
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Tower.dispose 0
+push argument 0
+pop pointer 0
+push this 1
+call Rectangle.dispose 1
+pop temp 0
+push this 2
+call Projectile.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

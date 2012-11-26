@@ -1,0 +1,447 @@
+function ComputerPlayer.new 0
+push constant 16
+call Memory.alloc 1
+pop pointer 0
+push constant 4
+pop this 0
+push constant 511
+push this 0
+sub
+pop this 1
+push constant 0
+pop this 2
+push constant 511
+pop this 3
+push this 0
+pop this 4
+push constant 0
+pop this 6
+push constant 1
+pop this 7
+push constant 2
+pop this 8
+push constant 3
+pop this 9
+push constant 0
+pop this 5
+push this 7
+pop this 10
+push constant 0
+pop this 11
+push constant 0
+pop this 12
+push constant 1
+neg
+pop this 13
+push constant 0
+pop this 14
+push constant 2341
+call Random.setSeed 1
+pop temp 0
+push constant 10
+pop this 15
+push pointer 0
+return
+function ComputerPlayer.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function ComputerPlayer.initialize 0
+push argument 0
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push this 1
+push this 2
+push this 3
+push this 4
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function ComputerPlayer.move 1
+push argument 0
+pop pointer 0
+push this 5
+push this 15
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 10
+call Random.randRange 1
+pop this 15
+push this 10
+pop local 0
+push constant 4
+call Random.randRange 1
+pop this 10
+push this 10
+push this 7
+eq
+push local 0
+push this 6
+eq
+and
+push this 10
+push this 6
+eq
+push local 0
+push this 7
+eq
+and
+or
+push this 10
+push this 9
+eq
+push local 0
+push this 8
+eq
+and
+or
+push this 10
+push this 8
+eq
+push local 0
+push this 9
+eq
+and
+or
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 10
+push this 7
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 9
+pop this 10
+goto IF_END2
+label IF_FALSE2
+push local 0
+pop this 10
+label IF_END2
+label IF_FALSE1
+push constant 0
+pop this 5
+label IF_FALSE0
+push this 10
+push this 6
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 3
+push this 0
+add
+pop this 3
+push this 2
+push this 0
+add
+pop this 4
+push pointer 0
+call ComputerPlayer.hitWall 1
+push constant 0
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push pointer 0
+push this 1
+push this 2
+call ComputerPlayer.hitTail 3
+push constant 0
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 1
+push this 2
+push this 3
+push this 4
+call Screen.drawRectangle 4
+pop temp 0
+goto IF_END5
+label IF_FALSE5
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END5
+goto IF_END4
+label IF_FALSE4
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END4
+push this 1
+push this 0
+add
+pop this 1
+label IF_FALSE3
+push this 10
+push this 7
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 1
+push this 0
+sub
+pop this 1
+push this 2
+push this 0
+add
+pop this 4
+push pointer 0
+call ComputerPlayer.hitWall 1
+push constant 0
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push pointer 0
+push this 1
+push this 2
+call ComputerPlayer.hitTail 3
+push constant 0
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 1
+push this 2
+push this 3
+push this 4
+call Screen.drawRectangle 4
+pop temp 0
+goto IF_END8
+label IF_FALSE8
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END8
+goto IF_END7
+label IF_FALSE7
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END7
+push this 3
+push this 0
+sub
+pop this 3
+label IF_FALSE6
+push this 10
+push this 9
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 1
+push this 0
+add
+pop this 3
+push this 2
+push this 0
+add
+pop this 4
+push pointer 0
+call ComputerPlayer.hitWall 1
+push constant 0
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push pointer 0
+push this 1
+push this 2
+call ComputerPlayer.hitTail 3
+push constant 0
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push this 1
+push this 2
+push this 3
+push this 4
+call Screen.drawRectangle 4
+pop temp 0
+goto IF_END11
+label IF_FALSE11
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END11
+goto IF_END10
+label IF_FALSE10
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END10
+push this 2
+push this 0
+add
+pop this 2
+label IF_FALSE9
+push this 10
+push this 8
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push this 2
+push this 0
+sub
+pop this 2
+push this 2
+push this 0
+add
+pop this 4
+push pointer 0
+call ComputerPlayer.hitWall 1
+push constant 0
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push pointer 0
+push this 1
+push this 2
+call ComputerPlayer.hitTail 3
+push constant 0
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push this 1
+push this 2
+push this 3
+push this 4
+call Screen.drawRectangle 4
+pop temp 0
+goto IF_END14
+label IF_FALSE14
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END14
+goto IF_END13
+label IF_FALSE13
+push constant 0
+not
+pop this 14
+push constant 0
+return
+label IF_END13
+label IF_FALSE12
+push this 5
+push constant 1
+add
+pop this 5
+push constant 0
+return
+function ComputerPlayer.checkBadMove 0
+push argument 0
+pop pointer 0
+push constant 0
+return
+function ComputerPlayer.hitTail 0
+push argument 0
+pop pointer 0
+push constant 16384
+push argument 2
+push constant 16
+call Math.multiply 2
+add
+push argument 1
+add
+call Memory.peek 1
+pop this 11
+push this 11
+push this 12
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+goto IF_END0
+label IF_FALSE0
+push constant 0
+return
+label IF_END0
+function ComputerPlayer.hitWall 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 511
+gt
+push this 3
+push constant 511
+gt
+or
+push this 2
+push constant 255
+gt
+or
+push this 4
+push constant 255
+gt
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push this 1
+push constant 0
+lt
+push this 3
+push constant 0
+lt
+or
+push this 2
+push constant 0
+lt
+or
+push this 4
+push constant 0
+lt
+or
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+return
+label IF_FALSE1
+push constant 0
+return
+function ComputerPlayer.getComputerWon 0
+push argument 0
+pop pointer 0
+push this 14
+return

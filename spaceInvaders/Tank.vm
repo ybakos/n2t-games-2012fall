@@ -1,0 +1,111 @@
+function Tank.new 0
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push constant 256
+pop this 0
+push constant 240
+pop this 1
+push pointer 0
+call Tank.draw 1
+pop temp 0
+push pointer 0
+return
+function Tank.draw 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push constant 20
+add
+push this 1
+push constant 10
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 8
+add
+push this 1
+push constant 6
+sub
+push this 0
+push constant 12
+add
+push this 1
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Tank.moveRight 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Tank.clear 1
+pop temp 0
+push this 0
+push constant 2
+add
+pop this 0
+push pointer 0
+call Tank.draw 1
+pop temp 0
+push constant 0
+return
+function Tank.moveLeft 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Tank.clear 1
+pop temp 0
+push this 0
+push constant 2
+sub
+pop this 0
+push pointer 0
+call Tank.draw 1
+pop temp 0
+push constant 0
+return
+function Tank.clear 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push constant 20
+add
+push this 1
+push constant 10
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 8
+add
+push this 1
+push constant 6
+sub
+push this 0
+push constant 12
+add
+push this 1
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Tank.getX 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 9
+add
+return

@@ -1,0 +1,741 @@
+function Poliwag.new 0
+push constant 4
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push constant 20
+pop this 2
+push constant 0
+not
+pop this 3
+push pointer 0
+call Poliwag.drawSprite 1
+pop temp 0
+push pointer 0
+return
+function Poliwag.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Poliwag.drawSprite 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Poliwag.drawTail 1
+pop temp 0
+push this 0
+push constant 6
+add
+push this 1
+push constant 4
+add
+push this 0
+push constant 12
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 4
+add
+push this 1
+push constant 5
+add
+push this 0
+push constant 5
+add
+push this 1
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 6
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 2
+add
+push this 1
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 1
+add
+push this 1
+push constant 8
+add
+push this 0
+push constant 1
+add
+push this 1
+push constant 11
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 2
+add
+push this 1
+push constant 12
+add
+push this 0
+push constant 2
+add
+push this 1
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 3
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 4
+add
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 16
+add
+push this 0
+push constant 6
+add
+push this 1
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 13
+add
+push this 1
+push constant 5
+add
+push this 0
+push constant 14
+add
+push this 1
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 15
+add
+push this 1
+push constant 6
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 16
+add
+push this 1
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 17
+add
+push this 1
+push constant 8
+add
+push this 0
+push constant 17
+add
+push this 1
+push constant 11
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 16
+add
+push this 1
+push constant 12
+add
+push this 0
+push constant 16
+add
+push this 1
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 15
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 14
+add
+push this 1
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 12
+add
+push this 1
+push constant 16
+add
+push this 0
+push constant 13
+add
+push this 1
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 17
+add
+push this 0
+push constant 11
+add
+push this 1
+push constant 17
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 18
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 4
+add
+push this 1
+push constant 17
+add
+push this 0
+push constant 4
+add
+push this 1
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 19
+add
+push this 0
+push constant 6
+add
+push this 1
+push constant 19
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 18
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 14
+add
+push this 1
+push constant 17
+add
+push this 0
+push constant 14
+add
+push this 1
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 12
+add
+push this 1
+push constant 19
+add
+push this 0
+push constant 13
+add
+push this 1
+push constant 19
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 7
+add
+push this 0
+push constant 7
+add
+push this 1
+push constant 9
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 7
+add
+push this 0
+push constant 13
+add
+push this 1
+push constant 9
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 8
+add
+push this 1
+push constant 11
+add
+push this 0
+push constant 10
+add
+push this 1
+push constant 11
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 12
+add
+push this 0
+push constant 6
+add
+push this 1
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 12
+add
+push this 0
+push constant 12
+add
+push this 1
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 12
+add
+push this 1
+push constant 14
+add
+push this 0
+push constant 10
+add
+push this 1
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 9
+add
+push this 1
+push constant 13
+add
+push this 0
+push constant 10
+add
+push this 1
+push constant 14
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 8
+add
+push this 1
+push constant 15
+add
+push this 0
+push constant 9
+add
+push this 1
+push constant 15
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push constant 6
+add
+push this 1
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 12
+add
+push this 1
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push constant 0
+return
+function Poliwag.drawTail 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 3
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push constant 9
+add
+push this 1
+push this 0
+push constant 11
+add
+push this 1
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 8
+add
+push this 1
+push constant 1
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 12
+add
+push this 1
+push constant 1
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 7
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 7
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 10
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 10
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 13
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 13
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+pop this 3
+goto IF_END0
+label IF_FALSE0
+push this 0
+push constant 7
+add
+push this 1
+push this 0
+push constant 9
+add
+push this 1
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 6
+add
+push this 1
+push constant 1
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 10
+add
+push this 1
+push constant 1
+add
+call Screen.drawPixel 2
+pop temp 0
+push this 0
+push constant 5
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 5
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 8
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 8
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push this 0
+push constant 11
+add
+push this 1
+push constant 2
+add
+push this 0
+push constant 11
+add
+push this 1
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+not
+pop this 3
+label IF_END0
+push constant 0
+return
+function Poliwag.erase 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push this 2
+add
+push this 1
+push this 2
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Poliwag.reset 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Poliwag.erase 1
+pop temp 0
+push constant 0
+pop this 0
+push constant 0
+pop this 1
+push pointer 0
+call Poliwag.drawSprite 1
+pop temp 0
+push constant 0
+return
+function Poliwag.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Poliwag.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Poliwag.moveUp 0
+push argument 0
+pop pointer 0
+push this 1
+push constant 1
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Poliwag.erase 1
+pop temp 0
+push this 1
+push constant 20
+sub
+pop this 1
+push pointer 0
+call Poliwag.drawSprite 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Poliwag.moveDown 0
+push argument 0
+pop pointer 0
+push this 1
+push this 2
+add
+push constant 220
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Poliwag.erase 1
+pop temp 0
+push this 1
+push constant 20
+add
+pop this 1
+push pointer 0
+call Poliwag.drawSprite 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Poliwag.moveLeft 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 1
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Poliwag.erase 1
+pop temp 0
+push this 0
+push constant 20
+sub
+pop this 0
+push pointer 0
+call Poliwag.drawSprite 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return
+function Poliwag.moveRight 0
+push argument 0
+pop pointer 0
+push this 0
+push this 2
+add
+push constant 490
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push pointer 0
+call Poliwag.erase 1
+pop temp 0
+push this 0
+push constant 20
+add
+pop this 0
+push pointer 0
+call Poliwag.drawSprite 1
+pop temp 0
+label IF_FALSE0
+push constant 0
+return

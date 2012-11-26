@@ -1,0 +1,468 @@
+function Pathing.new 3
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push constant 0
+pop this 1
+call Vector.new 0
+pop this 0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 32
+lt
+not
+if-goto WHILE_END0
+call Vector.new 0
+pop local 2
+push this 0
+push local 2
+call Vector.add 2
+pop temp 0
+push constant 0
+pop local 1
+label WHILE_EXP1
+push local 1
+push constant 64
+lt
+not
+if-goto WHILE_END1
+push local 2
+push constant 0
+call Vector.add 2
+pop temp 0
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP1
+label WHILE_END1
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push pointer 0
+return
+function Pathing.updateCoords 2
+push argument 0
+pop pointer 0
+push argument 1
+push constant 0
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push argument 2
+push constant 0
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+return
+label IF_FALSE1
+push argument 1
+push constant 63
+gt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+return
+label IF_FALSE2
+push argument 2
+push constant 31
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+return
+label IF_FALSE3
+push this 0
+push argument 2
+call Vector.at 2
+pop local 0
+push local 0
+push argument 1
+call Vector.at 2
+pop local 1
+push this 1
+push pointer 0
+push argument 1
+push argument 2
+call Pathing.formHash 3
+call HashTable.retrieve 2
+push constant 1
+neg
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 1
+call Pathing.flipDir 1
+push argument 3
+eq
+not
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+return
+label IF_FALSE5
+push this 1
+push pointer 0
+push argument 1
+push argument 2
+call Pathing.formHash 3
+push local 1
+call HashTable.insert 3
+pop temp 0
+label WHILE_EXP0
+push constant 0
+not
+not
+if-goto WHILE_END0
+push local 1
+push constant 3
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push argument 1
+push constant 0
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 0
+return
+label IF_FALSE7
+push pointer 0
+push argument 1
+push constant 1
+sub
+push argument 2
+push constant 3
+call Pathing.updateCoords 4
+return
+label IF_FALSE6
+push local 1
+push constant 4
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+return
+label IF_FALSE8
+push local 1
+push constant 1
+add
+pop local 1
+push local 0
+push local 1
+push argument 1
+call Vector.addAtIndex 3
+pop temp 0
+push local 1
+push constant 1
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push pointer 0
+push argument 1
+push argument 2
+push constant 1
+add
+push constant 2
+call Pathing.updateCoords 4
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 0
+not
+return
+label IF_FALSE10
+label IF_FALSE9
+push local 1
+push constant 2
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push pointer 0
+push argument 1
+push argument 2
+push constant 1
+sub
+push constant 1
+call Pathing.updateCoords 4
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push constant 0
+not
+return
+label IF_FALSE12
+label IF_FALSE11
+push local 1
+push constant 3
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push pointer 0
+push argument 1
+push constant 1
+sub
+push argument 2
+push constant 0
+call Pathing.updateCoords 4
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push constant 0
+not
+return
+label IF_FALSE14
+label IF_FALSE13
+goto WHILE_EXP0
+label WHILE_END0
+label IF_FALSE4
+push constant 0
+return
+function Pathing.buildTower 1
+push argument 0
+pop pointer 0
+push this 0
+push argument 2
+call Vector.at 2
+pop local 0
+push local 0
+push constant 4
+push argument 1
+call Vector.addAtIndex 3
+pop temp 0
+push this 1
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+call HashTable.new 0
+pop this 1
+goto IF_END0
+label IF_FALSE0
+push this 1
+call HashTable.dispose 1
+pop temp 0
+call HashTable.new 0
+pop this 1
+label IF_END0
+push pointer 0
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 3
+call Pathing.buildTowerHelper 4
+not
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+call Pathing.undo 1
+pop temp 0
+push constant 0
+return
+label IF_FALSE1
+push pointer 0
+push argument 1
+push constant 1
+sub
+push argument 2
+push constant 0
+call Pathing.buildTowerHelper 4
+not
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+call Pathing.undo 1
+pop temp 0
+push constant 0
+return
+label IF_FALSE2
+push pointer 0
+push argument 1
+push argument 2
+push constant 1
+add
+push constant 2
+call Pathing.buildTowerHelper 4
+not
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push pointer 0
+call Pathing.undo 1
+pop temp 0
+push constant 0
+return
+label IF_FALSE3
+push pointer 0
+push argument 1
+push argument 2
+push constant 1
+sub
+push constant 1
+call Pathing.buildTowerHelper 4
+not
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push pointer 0
+call Pathing.undo 1
+pop temp 0
+push constant 0
+return
+label IF_FALSE4
+push constant 0
+not
+return
+function Pathing.buildTowerHelper 2
+push argument 0
+pop pointer 0
+push argument 1
+push constant 0
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push argument 2
+push constant 0
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+return
+label IF_FALSE1
+push argument 1
+push constant 63
+gt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+return
+label IF_FALSE2
+push argument 2
+push constant 31
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+not
+return
+label IF_FALSE3
+push this 0
+push argument 2
+call Vector.at 2
+pop local 0
+push local 0
+push argument 1
+call Vector.at 2
+pop local 1
+push local 1
+push argument 3
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push pointer 0
+push argument 1
+push argument 2
+push local 1
+call Pathing.flipDir 1
+call Pathing.updateCoords 4
+return
+label IF_FALSE4
+push constant 0
+not
+return
+function Pathing.undo 0
+push argument 0
+pop pointer 0
+push constant 0
+return
+function Pathing.formHash 0
+push argument 0
+pop pointer 0
+push argument 1
+push constant 5
+call Hardware.shl 2
+push argument 2
+add
+return
+function Pathing.getMoveLoc 1
+push argument 0
+pop pointer 0
+push this 0
+push argument 2
+push constant 8
+call Math.divide 2
+call Vector.at 2
+pop local 0
+push local 0
+push argument 1
+push constant 8
+call Math.divide 2
+call Vector.at 2
+return
+function Pathing.flipDir 0
+push argument 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 3
+return
+label IF_FALSE0
+push argument 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 2
+return
+label IF_FALSE1
+push argument 0
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 1
+return
+label IF_FALSE2
+push constant 0
+return
